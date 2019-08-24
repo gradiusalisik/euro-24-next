@@ -1,11 +1,11 @@
-import ImageIcon from "../img/firstScreen/illustration-greeting.svg";
+const ImageIcon = "../../../static/img/firstScreen/illustration-greeting.svg";
 
-import LogoKbe from "../img/brands/logo-kbe.svg";
-import LogoRehau from "../img/brands/logo-rehau.svg";
-import LogoSalamander from "../img/brands/logo-salamander.svg";
-import LogoSchuco from "../img/brands/logo-schuco.svg";
-import LogoTrocal from "../img/brands/logo-trocal.svg";
-import LogoVeka from "../img/brands/logo-veka.svg";
+const LogoKbe = "../../../static/img/brands/logo-kbe.svg";
+const LogoRehau = "../../../static/img/brands/logo-rehau.svg";
+const LogoSalamander = "../../../static/img/brands/logo-salamander.svg";
+const LogoSchuco = "../../../static/img/brands/logo-schuco.svg";
+const LogoTrocal = "../../../static/img/brands/logo-trocal.svg";
+const LogoVeka = "../../../static/img/brands/logo-veka.svg";
 
 export const firstScreen = {
   title:

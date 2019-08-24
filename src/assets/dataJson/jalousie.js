@@ -1,5 +1,3 @@
-import ExampleImg from "../img/jalousie/example.jpg";
-
 export const tabs = [
   {
     id: "horizontal",
@@ -30,7 +28,7 @@ export const jalousies = [
     description:
       "Trocal Balance&nbsp;&mdash; это воплощение новых идей для стильного и&nbsp;качественного решения в&nbsp;частном строительстве и&nbsp;ремонте.<br /><br />Традиционно выделяясь высоким качеством, окна из&nbsp;профиля Trocal Balance имеют элегантный внешний вид и&nbsp;отвечают эстетическим вкусам даже самых притязательных потребителей.",
     price: "2000",
-    background: ExampleImg
+    background: "../../../static/img/jalousie/example.jpg"
   },
   {
     id: "rolled",
@@ -38,7 +36,7 @@ export const jalousies = [
     description:
       "Trocal Balance&nbsp;&mdash; это воплощение новых идей для стильного и&nbsp;качественного решения в&nbsp;частном строительстве и&nbsp;ремонте.<br /><br />Традиционно выделяясь высоким качеством, окна из&nbsp;профиля Trocal Balance имеют элегантный внешний вид и&nbsp;отвечают эстетическим вкусам даже самых притязательных потребителей.",
     price: "2105",
-    background: ExampleImg
+    background: "../../../static/img/jalousie/example.jpg"
   },
   {
     id: "plisse",
@@ -46,7 +44,7 @@ export const jalousies = [
     description:
       "Trocal Balance&nbsp;&mdash; это воплощение новых идей для стильного и&nbsp;качественного решения в&nbsp;частном строительстве и&nbsp;ремонте.<br /><br />Традиционно выделяясь высоким качеством, окна из&nbsp;профиля Trocal Balance имеют элегантный внешний вид и&nbsp;отвечают эстетическим вкусам даже самых притязательных потребителей.",
     price: "2500",
-    background: ExampleImg
+    background: "../../../static/img/jalousie/example.jpg"
   },
   {
     id: "zebra",
@@ -54,7 +52,7 @@ export const jalousies = [
     description:
       "Trocal Balance&nbsp;&mdash; это воплощение новых идей для стильного и&nbsp;качественного решения в&nbsp;частном строительстве и&nbsp;ремонте.<br /><br />Традиционно выделяясь высоким качеством, окна из&nbsp;профиля Trocal Balance имеют элегантный внешний вид и&nbsp;отвечают эстетическим вкусам даже самых притязательных потребителей.",
     price: "2200",
-    background: ExampleImg
+    background: "../../../static/img/jalousie/example.jpg"
   },
   {
     id: "vertical",
@@ -62,6 +60,6 @@ export const jalousies = [
     description:
       "Trocal Balance&nbsp;&mdash; это воплощение новых идей для стильного и&nbsp;качественного решения в&nbsp;частном строительстве и&nbsp;ремонте.<br /><br />Традиционно выделяясь высоким качеством, окна из&nbsp;профиля Trocal Balance имеют элегантный внешний вид и&nbsp;отвечают эстетическим вкусам даже самых притязательных потребителей.",
     price: "2222",
-    background: ExampleImg
+    background: "../../../static/img/jalousie/example.jpg"
   }
 ];

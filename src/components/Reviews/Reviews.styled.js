@@ -3,7 +3,8 @@ import { colors } from "../../variables";
 import SliderReviews from "../SliderReviews/SliderReviews";
 import SliderButton from "../SliderButton/SliderButton";
 
-import ReviewIllustration from "../../assets/img/reviews/illustration-reviews.svg";
+const ReviewIllustration =
+  "../../../static/img/reviews/illustration-reviews.svg";
 
 export const ReviewsStyled = styled.div`
   position: relative;

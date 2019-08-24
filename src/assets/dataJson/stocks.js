@@ -1,4 +1,4 @@
-import ImageStocks from "../img/stocks/dom.jpg";
+const ImageStocks = "../../../static/img/stocks/dom.jpg";
 
 export const slides = [
   {

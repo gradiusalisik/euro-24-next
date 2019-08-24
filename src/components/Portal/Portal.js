@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 export default class Portal extends React.Component {
   componentDidMount() {
-    this.element = document.createElement("div");
+    this.element = document.querySelector("#modal");
+    this.forceUpdate();
   }
 
   render() {

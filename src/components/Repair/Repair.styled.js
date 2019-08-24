@@ -85,7 +85,7 @@ export const Info = styled.div`
 `;
 
 export const Window = styled.div`
-  ${cardStyle}
+  ${cardStyle};
 `;
 
 export const Balconies = styled.div`

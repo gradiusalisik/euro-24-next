@@ -5,8 +5,6 @@ import {
   advantagesWindow,
   advantagesBalconies
 } from "../../assets/dataJson/repair";
-import BalconiesImg from "../../assets/img/repair/balconies.jpg";
-import WindowImg from "../../assets/img/repair/window.jpg";
 
 import RepairInfo from "../RepairInfo/RepairInfo";
 
@@ -20,6 +18,9 @@ import {
   Title,
   RepairInfoStyled
 } from "./Repair.styled";
+
+const BalconiesImg = "../../../static/img/repair/balconies.jpg";
+const WindowImg = "../../../static/img/repair/window.jpg";
 
 const Repair = () => {
   const [activeName, setActiveName] = useState(null);

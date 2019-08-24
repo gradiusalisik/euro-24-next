@@ -34,7 +34,7 @@ import {
   CupboardStyled,
   Content,
   ContentWrap
-} from "./App.styled.js";
+} from "../App.styled";
 
 const App = () => {
   const [isShowHeader, setShowHeader] = useState(false);

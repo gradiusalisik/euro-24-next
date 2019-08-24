@@ -1,8 +1,8 @@
-import ExampleImage from "../img/portfolio/example.jpg";
-import ExampleImage2 from "../img/portfolio/example2.jpg";
-import ExampleImage3 from "../img/portfolio/example3.jpg";
-import ExampleImage4 from "../img/portfolio/example4.jpg";
-import ExampleImage5 from "../img/portfolio/example5.jpg";
+const ExampleImage = "../../../static/img/portfolio/example.jpg";
+const ExampleImage2 = "../../../static/img/portfolio/example2.jpg";
+const ExampleImage3 = "../../../static/img/portfolio/example3.jpg";
+const ExampleImage4 = "../../../static/img/portfolio/example4.jpg";
+const ExampleImage5 = "../../../static/img/portfolio/example5.jpg";
 
 export const tags = [
   {

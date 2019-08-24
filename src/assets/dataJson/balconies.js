@@ -1,5 +1,4 @@
 import React from "react";
-import ExampleImg from "../img/balconies/example.jpg";
 import { Cold } from "../../components/Icons/Cold";
 
 export const tabs = [
@@ -24,7 +23,7 @@ export const tabs = [
 export const balconies = [
   {
     id: "cold",
-    background: ExampleImg,
+    background: "../../../static/img/balconies/example.jpg",
     title: "Al Provedal",
     description:
       "Trocal Balance&nbsp;&mdash; это воплощение новых идей для стильного и&nbsp;качественного решения в&nbsp;частном строительстве и&nbsp;ремонте. <br /><br />Традиционно выделяясь высоким качеством, окна из&nbsp;профиля Trocal Balance имеют элегантный внешний вид и&nbsp;отвечают эстетическим вкусам даже самых притязательных потребителей.",
@@ -54,7 +53,7 @@ export const balconies = [
   },
   {
     id: "little-warm",
-    background: ExampleImg,
+    background: "../../../static/img/balconies/example.jpg",
     title: "Al Provedal",
     description:
       "Trocal Balance&nbsp;&mdash; это воплощение новых идей для стильного и&nbsp;качественного решения в&nbsp;частном строительстве и&nbsp;ремонте. <br /><br />Традиционно выделяясь высоким качеством, окна из&nbsp;профиля Trocal Balance имеют элегантный внешний вид и&nbsp;отвечают эстетическим вкусам даже самых притязательных потребителей.",
@@ -84,7 +83,7 @@ export const balconies = [
   },
   {
     id: "warm",
-    background: ExampleImg,
+    background: "../../../static/img/balconies/example.jpg",
     title: "Al Provedal",
     description:
       "Trocal Balance&nbsp;&mdash; это воплощение новых идей для стильного и&nbsp;качественного решения в&nbsp;частном строительстве и&nbsp;ремонте. <br /><br />Традиционно выделяясь высоким качеством, окна из&nbsp;профиля Trocal Balance имеют элегантный внешний вид и&nbsp;отвечают эстетическим вкусам даже самых притязательных потребителей.",
@@ -114,7 +113,7 @@ export const balconies = [
   },
   {
     id: "french",
-    background: ExampleImg,
+    background: "../../../static/img/balconies/example.jpg",
     title: "Al Provedal",
     description:
       "Trocal Balance&nbsp;&mdash; это воплощение новых идей для стильного и&nbsp;качественного решения в&nbsp;частном строительстве и&nbsp;ремонте. <br /><br />Традиционно выделяясь высоким качеством, окна из&nbsp;профиля Trocal Balance имеют элегантный внешний вид и&nbsp;отвечают эстетическим вкусам даже самых притязательных потребителей.",

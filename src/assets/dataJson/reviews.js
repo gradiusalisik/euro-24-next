@@ -1,4 +1,4 @@
-import ExampleImage from "../img/reviews/example.jpg";
+const ExampleImage = "../../../static/img/reviews/example.jpg";
 
 export const reviews = [
   {

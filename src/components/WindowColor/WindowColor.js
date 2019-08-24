@@ -87,10 +87,6 @@ const WindowColor = ({
                     value={color.value}
                     name={color.name}
                     background={color.background}
-                    // TODO in future
-                    // background={`http://euro-24.ru/images/${
-                    //   item.category
-                    // }/button/${color.background}.jpg`}
                     onChange={handleChangeColor}
                   />
                 ))}

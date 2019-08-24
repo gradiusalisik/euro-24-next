@@ -1,12 +1,12 @@
 import React from "react";
-import ExampleImg from "../img/nets/example.jpg";
 import { Cold } from "../../components/Icons/Cold";
-import ImageStandart from "../img/nets/sheets/standart.jpg";
-import ImageAntiCats from "../img/nets/sheets/anti-cats.jpg";
-import ImageAntiDust from "../img/nets/sheets/anti-dust.jpg";
-import ImageView from "../img/nets/sheets/view.jpg";
-import ImageAntiPollen from "../img/nets/sheets/anti-pollen.jpg";
-import ImageAluminium from "../img/nets/sheets/aluminum.jpg";
+const ExampleImg = "../../../static/img/nets/example.jpg";
+const ImageStandart = "../../../static/img/nets/sheets/standart.jpg";
+const ImageAntiCats = "../../../static/img/nets/sheets/anti-cats.jpg";
+const ImageAntiDust = "../../../static/img/nets/sheets/anti-dust.jpg";
+const ImageView = "../../../static/img/nets/sheets/view.jpg";
+const ImageAntiPollen = "../../../static/img/nets/sheets/anti-pollen.jpg";
+const ImageAluminium = "../../../static/img/nets/sheets/aluminum.jpg";
 
 export const tags = [
   {
