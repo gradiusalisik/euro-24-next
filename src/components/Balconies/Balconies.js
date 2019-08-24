@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { inject } from "mobx-react";
 
 // data
 import { tabs, balconies } from "../../assets/dataJson/balconies";
@@ -17,7 +18,7 @@ import {
   Info
 } from "./Balconies.styled";
 
-const Balconies = () => {
+const Balconies = ({ openModalCall }) => {
   const [tabId, setTabId] = useState(tabs[0].id);
 
   const handleClick = id => {
@@ -29,6 +30,9 @@ const Balconies = () => {
   const background = balconies[count].background;
   const advantages = balconies[count].advantages;
   const alt = balconies[count].id;
+  const handleClickCall = () => {
+    openModalCall();
+  };
 
   return (
     <BalconiesStyled>
@@ -38,7 +42,9 @@ const Balconies = () => {
         <Info>
           <Photo src={background} alt={alt} />
           <Slides slides={balconies} count={count}>
-            <ButtonStyled>Заказать жалюзи</ButtonStyled>
+            <ButtonStyled onClick={handleClickCall}>
+              Заказать балкон
+            </ButtonStyled>
           </Slides>
         </Info>
         <Advantages>
@@ -56,4 +62,6 @@ const Balconies = () => {
   );
 };
 
-export default Balconies;
+export default inject(({ modalStore }) => ({
+  openModalCall: modalStore.openModalCall
+}))(Balconies);

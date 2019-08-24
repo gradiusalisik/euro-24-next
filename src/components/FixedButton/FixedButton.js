@@ -1,12 +1,23 @@
 import React from "react";
+import { inject } from "mobx-react";
 import Button from "../Button/Button";
 
 import { FixedButtonStyled } from "./FixedButton.styled";
 
-const FixedButton = () => (
-  <FixedButtonStyled>
-    <Button theme="tetriary">Позвоните мне</Button>
-  </FixedButtonStyled>
-);
+const FixedButton = ({ openModalCall }) => {
+  const handleClickCall = () => {
+    openModalCall();
+  };
 
-export default FixedButton;
+  return (
+    <FixedButtonStyled>
+      <Button theme="tetriary" onClick={handleClickCall}>
+        Позвоните мне
+      </Button>
+    </FixedButtonStyled>
+  );
+};
+
+export default inject(({ modalStore }) => ({
+  openModalCall: modalStore.openModalCall
+}))(FixedButton);

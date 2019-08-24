@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { inject } from "mobx-react";
 
 // data
 import { tabs, jalousies } from "../../assets/dataJson/jalousie";
@@ -14,7 +15,7 @@ import {
   Photo
 } from "./Jalousie.styled";
 
-const Jalousie = () => {
+const Jalousie = ({ openModalCall }) => {
   const [tabId, setTabId] = useState(tabs[0].id);
 
   const handleClick = id => {
@@ -25,6 +26,9 @@ const Jalousie = () => {
 
   const background = jalousies[count].background;
   const alt = jalousies[count].id;
+  const handleClickCall = () => {
+    openModalCall();
+  };
 
   return (
     <JalousieStyled>
@@ -32,7 +36,7 @@ const Jalousie = () => {
       <Tabs id={tabId} onClick={handleClick} tabs={tabs} />
       <Content>
         <Slides slides={jalousies} count={count}>
-          <ButtonStyled>Заказать жалюзи</ButtonStyled>
+          <ButtonStyled onClick={handleClickCall}>Заказать жалюзи</ButtonStyled>
         </Slides>
         <Photo src={background} alt={alt} />
       </Content>
@@ -40,4 +44,6 @@ const Jalousie = () => {
   );
 };
 
-export default Jalousie;
+export default inject(({ modalStore }) => ({
+  openModalCall: modalStore.openModalCall
+}))(Jalousie);

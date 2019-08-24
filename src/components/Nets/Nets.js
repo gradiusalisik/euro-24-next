@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { inject } from "mobx-react";
 
 // data
 import { tags, slides, sheets } from "../../assets/dataJson/nets";
@@ -21,7 +22,7 @@ import {
   AdvantageStyled
 } from "./Nets.styled";
 
-const Nets = () => {
+const Nets = ({ openModalCall }) => {
   const defaultSlides = slides.filter(slide => slide.tags.includes(tags[0].id));
 
   const [tagIds, setTagId] = useState([tags[0].id]);
@@ -63,6 +64,10 @@ const Nets = () => {
     setOpenChooseSheet(false);
   };
 
+  const handleClickCall = () => {
+    openModalCall();
+  };
+
   const getSlideTags = slideTags =>
     slideTags
       .map(slideTag => tags.filter(tag => slideTag === tag.id)[0])
@@ -95,7 +100,9 @@ const Nets = () => {
               isArrows
             >
               <Buttons>
-                <Button size="full">Заказать сетку</Button>
+                <Button size="full" onClick={handleClickCall}>
+                  Заказать сетку
+                </Button>
                 <Button
                   size="full"
                   theme="secondary"
@@ -123,4 +130,6 @@ const Nets = () => {
   );
 };
 
-export default Nets;
+export default inject(({ modalStore }) => ({
+  openModalCall: modalStore.openModalCall
+}))(Nets);

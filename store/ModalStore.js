@@ -11,6 +11,9 @@ class ModalStore {
   isShowModalDiscount = false;
 
   @observable
+  isShowModalCall = false;
+
+  @observable
   hideCodeDiscount = false;
 
   @action
@@ -31,6 +34,17 @@ class ModalStore {
   @action
   closeModalReview = () => {
     this.isShowModalReview = false;
+  };
+
+  @action
+  openModalCall = () => {
+    console.log("open");
+    this.isShowModalCall = true;
+  };
+
+  @action
+  closeModalCall = () => {
+    this.isShowModalCall = false;
   };
 
   @action

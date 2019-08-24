@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { inject } from "mobx-react";
 
 // data
 import { tags, slides, colors } from "../../assets/dataJson/window";
@@ -24,7 +25,7 @@ import {
   AdvantageStyled
 } from "./Window.styled";
 
-const Window = () => {
+const Window = ({ openModalCall }) => {
   const defaultSlides = slides.filter(slide => slide.tags.includes(tags[0].id));
 
   const defaultValue = colors.list[0].colors[0].value;
@@ -102,6 +103,10 @@ const Window = () => {
     setOpenColor(false);
   };
 
+  const handleClickCall = () => {
+    openModalCall();
+  };
+
   return (
     <WindowStyled>
       <Title>Подобрать окна</Title>
@@ -141,7 +146,9 @@ const Window = () => {
               isArrows
             >
               <Buttons>
-                <Button size="full">Заказать окна</Button>
+                <Button size="full" onClick={handleClickCall}>
+                  Заказать окна
+                </Button>
                 <Button size="full">Рассчитать стоимость</Button>
               </Buttons>
             </Slides>
@@ -162,4 +169,6 @@ const Window = () => {
   );
 };
 
-export default Window;
+export default inject(({ modalStore }) => ({
+  openModalCall: modalStore.openModalCall
+}))(Window);

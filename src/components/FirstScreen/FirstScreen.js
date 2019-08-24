@@ -21,9 +21,9 @@ import {
 
 const { title, description, image, brands } = firstScreen;
 
-const FirstScreen = ({ openModalSuccess }) => {
+const FirstScreen = ({ openModalCall }) => {
   const handleClickQuestion = () => {
-    openModalSuccess();
+    openModalCall();
   };
 
   return (
@@ -61,5 +61,5 @@ const FirstScreen = ({ openModalSuccess }) => {
 };
 
 export default inject(({ modalStore }) => ({
-  openModalSuccess: modalStore.openModalSuccess
+  openModalCall: modalStore.openModalCall
 }))(FirstScreen);

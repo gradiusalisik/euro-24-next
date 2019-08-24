@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { PropTypes as pt } from "prop-types";
+import { inject } from "mobx-react";
 
 import {
   ChooseSheetStyled,
@@ -18,13 +19,23 @@ import {
   ArrowBackStyled
 } from "./ChooseSheet.styled";
 
-const ChooseSheet = ({ sheets, price, onClickBack, className }) => {
+const ChooseSheet = ({
+  sheets,
+  price,
+  onClickBack,
+  className,
+  openModalCall
+}) => {
   const [valueSheet, setValueSheet] = useState(sheets[0].value);
   const [titleSheet, setTitleSheet] = useState(sheets[0].title);
 
   const handleClick = ({ value, title }) => () => {
     setValueSheet(value);
     setTitleSheet(title);
+  };
+
+  const handleClickCall = () => {
+    openModalCall();
   };
 
   return (
@@ -51,7 +62,9 @@ const ChooseSheet = ({ sheets, price, onClickBack, className }) => {
             ))}
           </Sheets>
           <PriceStyled price={price} />
-          <ButtonOrder size="full">Заказать сетку</ButtonOrder>
+          <ButtonOrder size="full" onClick={handleClickCall}>
+            Заказать сетку
+          </ButtonOrder>
         </Info>
       </Content>
     </ChooseSheetStyled>
@@ -70,4 +83,6 @@ ChooseSheet.propTypes = {
   price: pt.string
 };
 
-export default ChooseSheet;
+export default inject(({ modalStore }) => ({
+  openModalCall: modalStore.openModalCall
+}))(ChooseSheet);

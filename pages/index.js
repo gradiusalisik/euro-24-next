@@ -23,6 +23,7 @@ import Repair from "../src/components/Repair/Repair";
 import Feedback from "../src/components/Feedback/Feedback";
 import Footer from "../src/components/Footer/Footer";
 import ModalSuccess from "../src/components/ModalSuccess/ModalSuccess";
+import ModalCall from "../src/components/ModalCall/ModalCall";
 import FixedButton from "../src/components/FixedButton/FixedButton";
 import Promo from "../src/components/Promo/Promo";
 
@@ -99,9 +100,10 @@ const App = () => {
         </Element>
         <Feedback />
         <Footer />
-        <ModalSuccess />
         <FixedButton />
       </Container>
+      <ModalSuccess />
+      <ModalCall />
     </AppStyled>
   );
 };
