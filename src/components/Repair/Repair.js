@@ -19,8 +19,8 @@ import {
   RepairInfoStyled
 } from "./Repair.styled";
 
-const BalconiesImg = "../../../static/img/repair/balconies.jpg";
-const WindowImg = "../../../static/img/repair/window.jpg";
+const BalconiesImg = "/static/img/repair/balconies.jpg";
+const WindowImg = "/static/img/repair/window.jpg";
 
 const Repair = () => {
   const [activeName, setActiveName] = useState(null);

@@ -1,12 +1,12 @@
 import React from "react";
 import { Cold } from "../../components/Icons/Cold";
-const ExampleImg = "../../../static/img/nets/example.jpg";
-const ImageStandart = "../../../static/img/nets/sheets/standart.jpg";
-const ImageAntiCats = "../../../static/img/nets/sheets/anti-cats.jpg";
-const ImageAntiDust = "../../../static/img/nets/sheets/anti-dust.jpg";
-const ImageView = "../../../static/img/nets/sheets/view.jpg";
-const ImageAntiPollen = "../../../static/img/nets/sheets/anti-pollen.jpg";
-const ImageAluminium = "../../../static/img/nets/sheets/aluminum.jpg";
+const ExampleImg = "/static/img/nets/example.jpg";
+const ImageStandart = "/static/img/nets/sheets/standart.jpg";
+const ImageAntiCats = "/static/img/nets/sheets/anti-cats.jpg";
+const ImageAntiDust = "/static/img/nets/sheets/anti-dust.jpg";
+const ImageView = "/static/img/nets/sheets/view.jpg";
+const ImageAntiPollen = "/static/img/nets/sheets/anti-pollen.jpg";
+const ImageAluminium = "/static/img/nets/sheets/aluminum.jpg";
 
 export const tags = [
   {

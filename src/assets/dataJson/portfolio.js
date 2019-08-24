@@ -1,8 +1,8 @@
-const ExampleImage = "../../../static/img/portfolio/example.jpg";
-const ExampleImage2 = "../../../static/img/portfolio/example2.jpg";
-const ExampleImage3 = "../../../static/img/portfolio/example3.jpg";
-const ExampleImage4 = "../../../static/img/portfolio/example4.jpg";
-const ExampleImage5 = "../../../static/img/portfolio/example5.jpg";
+const ExampleImage = "/static/img/portfolio/example.jpg";
+const ExampleImage2 = "/static/img/portfolio/example2.jpg";
+const ExampleImage3 = "/static/img/portfolio/example3.jpg";
+const ExampleImage4 = "/static/img/portfolio/example4.jpg";
+const ExampleImage5 = "/static/img/portfolio/example5.jpg";
 
 export const tags = [
   {

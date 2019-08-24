@@ -1,4 +1,4 @@
-const ExampleImg = "../../../static/img/cupboard/example.jpg";
+const ExampleImg = "/static/img/cupboard/example.jpg";
 
 export const tabs = [
   {

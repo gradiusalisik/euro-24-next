@@ -4,7 +4,7 @@ import SliderReviews from "../SliderReviews/SliderReviews";
 import SliderButton from "../SliderButton/SliderButton";
 
 const ReviewIllustration =
-  "../../../static/img/reviews/illustration-reviews.svg";
+  "/static/img/reviews/illustration-reviews.svg";
 
 export const ReviewsStyled = styled.div`
   position: relative;

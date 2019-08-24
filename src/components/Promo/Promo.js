@@ -3,7 +3,7 @@ import { inject } from "mobx-react";
 import MainForm from "../MainForm/MainForm";
 import ModalDiscount from "../ModalDiscount/ModalDiscount";
 
-const PromoImage = "../../../static/img/promo/illustration-size.svg";
+const PromoImage = "/static/img/promo/illustration-size.svg";
 
 import {
   PromoStyled,
