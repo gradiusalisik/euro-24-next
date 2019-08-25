@@ -20,6 +20,7 @@ import Window from "../src/components/Window/Window";
 import Repair from "../src/components/Repair/Repair";
 import Feedback from "../src/components/Feedback/Feedback";
 import Footer from "../src/components/Footer/Footer";
+import ModalReviewSuccess from "../src/components/ModalReviewSuccess/ModalReviewSuccess";
 import ModalSuccess from "../src/components/ModalSuccess/ModalSuccess";
 import ModalWindowCalculator from "../src/components/ModalWindowCalculator/ModalWindowCalculator";
 import ModalCall from "../src/components/ModalCall/ModalCall";
@@ -102,6 +103,7 @@ const App = () => {
         <FixedButton />
       </Container>
       <ModalSuccess />
+      <ModalReviewSuccess />
       <ModalCall />
       <ModalWindowCalculator />
     </AppStyled>

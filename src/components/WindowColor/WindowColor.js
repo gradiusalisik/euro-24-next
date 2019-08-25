@@ -56,9 +56,9 @@ const WindowColor = ({
     openModalCall();
   };
 
-  const handleOpenModalWindow = () => {
-    openModalWindowCalculator();
-  };
+  // const handleOpenModalWindow = () => {
+  //   openModalWindowCalculator();
+  // };
 
   const slideCount = listColors.length - 1;
 
@@ -109,9 +109,9 @@ const WindowColor = ({
             <Button size="full" onClick={handleOpenModalCall}>
               Заказать окна
             </Button>
-            <Button size="full" onClick={handleOpenModalWindow}>
+            {/* <Button size="full" onClick={handleOpenModalWindow}>
               Рассчитать стоимость
-            </Button>
+            </Button> */}
           </Buttons>
         </Info>
       </Content>

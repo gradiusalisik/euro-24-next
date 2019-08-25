@@ -1,33 +1,7 @@
 import styled, { css } from "styled-components";
 import { colors, font } from "../../variables";
 
-export const FieldStyled = styled.div`
-  position: relative;
-  width: 100%;
-
-  ${props =>
-    props.filled &&
-    css`
-      ${Input} {
-        border-color: ${colors.main};
-      }
-    `};
-
-  ${props =>
-    props.error &&
-    css`
-      ${Input} {
-        border-color: ${colors.softRed};
-      }
-      ${Error} {
-        opacity: 1;
-        visibility: visible;
-      }
-    `};
-  ${p => size[p.size]};
-`;
-
-export const Input = styled.input`
+const inputStyles = css`
   padding-left: 12px;
   width: 100%;
   height: 40px;
@@ -48,6 +22,42 @@ export const Input = styled.input`
   }
 `;
 
+export const FieldStyled = styled.div`
+  position: relative;
+  width: 100%;
+
+  input {
+    ${inputStyles};
+  }
+
+  ${p => size[p.size]};
+
+  ${props =>
+    props.filled &&
+    css`
+      ${Input} {
+        border-color: ${colors.main};
+      }
+    `};
+
+  ${props =>
+    props.error &&
+    css`
+      ${Input},
+      input {
+        border-color: ${colors.softRed};
+      }
+      ${Error} {
+        opacity: 1;
+        visibility: visible;
+      }
+    `};
+`;
+
+export const Input = styled.input`
+  ${inputStyles};
+`;
+
 export const Error = styled.span`
   position: absolute;
   top: calc(100% + 8px);
@@ -63,10 +73,12 @@ export const Error = styled.span`
 
 const size = {
   full: css`
-    ${Input} {
+    ${Input},
+    input {
       width: 100%;
       height: 100%;
       border: solid 1px ${colors.whiteBlue};
       border-top: none;
     }
-`};
+  `
+};

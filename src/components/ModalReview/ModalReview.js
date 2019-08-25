@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { inject } from "mobx-react";
-import { useForm } from "../../utils/customHooks";
+import useForm from "react-hook-form";
+
+import { validateName, validateTextarea } from "../../utils/validate";
 
 import Modal from "../Modal/Modal";
 import FieldFiles from "../FieldFiles/FieldFiles";
@@ -16,19 +18,39 @@ import {
   ButtonSubmit
 } from "./ModalReview.styled";
 
-const ModalReview = ({ closeModalReview, isShowModalReview }) => {
+const ModalReview = ({
+  closeModalReview,
+  isShowModalReview,
+  openModalReviewSuccess
+}) => {
+  const [myFiles, setMyfiles] = useState([]);
+  const [isErrorFiles, setErrorFiles] = useState(false);
+  const [isSubmitCheck, setSubmitCheck] = useState(false);
+
   const handleClose = () => {
     closeModalReview();
   };
 
-  const formInfo = () => {
-    console.log(
-      inputs,
-      `User Created!, Name: ${inputs.name}, Phone: ${inputs.reviews}`
-    );
+  const { register, handleSubmit, errors } = useForm();
+
+  const onSubmit = (data, e) => {
+    if (myFiles.length === 0) {
+      return false;
+    }
+    e.target.reset();
+    openModalReviewSuccess();
+    handleClose();
   };
 
-  const { inputs, handleInputChange, handleSubmit } = useForm({}, formInfo);
+  const setFiles = files => setMyfiles(files);
+
+  useEffect(() => {
+    setErrorFiles(myFiles.length === 0);
+  }, [myFiles]);
+
+  const handleClick = e => {
+    setSubmitCheck(true);
+  };
 
   return (
     <Modal isShow={isShowModalReview} onClose={handleClose}>
@@ -37,28 +59,37 @@ const ModalReview = ({ closeModalReview, isShowModalReview }) => {
           <Image />
           <Title>Оставить отзыв</Title>
         </Header>
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit(onSubmit)}>
           <FieldStyled
             name="name"
             type="text"
-            value={inputs.name}
+            ref={register({
+              validate: validateName,
+              required: true
+            })}
             placeholder="Как к вам обращаться?"
-            error
-            onChange={handleInputChange}
+            error={errors.name && "Пожалуйста, введите русские символы"}
           />
           <TextareaStyled
             name="reviews"
-            value={inputs.reviews}
             placeholder="Ваш отзыв"
+            ref={register({
+              validate: validateTextarea,
+              required: true
+            })}
+            error={!!errors.reviews}
           />
           <FieldStyled
             name="video"
             type="text"
-            value={inputs.video}
             placeholder="Ссылка на видео-отзыв (необязательно)"
           />
-          <FieldFiles />
-          <ButtonSubmit type="submit" size="full">
+          <FieldFiles
+            name="files"
+            handleParentFiles={setFiles}
+            error={isSubmitCheck && isErrorFiles}
+          />
+          <ButtonSubmit type="submit" size="full" onClick={handleClick}>
             Оставить отзыв
           </ButtonSubmit>
         </Form>
@@ -69,5 +100,6 @@ const ModalReview = ({ closeModalReview, isShowModalReview }) => {
 
 export default inject(({ modalStore }) => ({
   closeModalReview: modalStore.closeModalReview,
+  openModalReviewSuccess: modalStore.openModalReviewSuccess,
   isShowModalReview: modalStore.isShowModalReview
 }))(ModalReview);

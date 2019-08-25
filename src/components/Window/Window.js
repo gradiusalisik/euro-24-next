@@ -107,9 +107,9 @@ const Window = ({ openModalCall, openModalWindowCalculator }) => {
     openModalCall();
   };
 
-  const handleClickOpenWindowCalculator = () => {
-    openModalWindowCalculator();
-  };
+  // const handleClickOpenWindowCalculator = () => {
+  //   openModalWindowCalculator();
+  // };
 
   return (
     <WindowStyled>
@@ -153,9 +153,9 @@ const Window = ({ openModalCall, openModalWindowCalculator }) => {
                 <Button size="full" onClick={handleClickCall}>
                   Заказать окна
                 </Button>
-                <Button size="full" onClick={handleClickOpenWindowCalculator}>
+                {/* <Button size="full" onClick={handleClickOpenWindowCalculator}>
                   Рассчитать стоимость
-                </Button>
+                </Button> */}
               </Buttons>
             </Slides>
           </Information>

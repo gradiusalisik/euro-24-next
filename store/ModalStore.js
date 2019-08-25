@@ -5,6 +5,9 @@ class ModalStore {
   isShowModalSuccess = false;
 
   @observable
+  isShowModalReviewSuccess = false;
+
+  @observable
   isShowModalReview = false;
 
   @observable
@@ -43,6 +46,16 @@ class ModalStore {
   };
 
   @action
+  openModalReviewSuccess = () => {
+    this.isShowModalReviewSuccess = true;
+  };
+
+  @action
+  closeModalReviewSuccess = () => {
+    this.isShowModalReviewSuccess = false;
+  };
+
+  @action
   openModalSuccess = () => {
     this.isShowModalSuccess = true;
   };
@@ -64,7 +77,6 @@ class ModalStore {
 
   @action
   openModalCall = () => {
-    console.log("open");
     this.isShowModalCall = true;
   };
 

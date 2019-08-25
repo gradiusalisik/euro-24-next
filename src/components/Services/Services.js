@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { inject } from "mobx-react";
 
 // data
 import {
@@ -26,7 +27,7 @@ import {
   ArrowBackStyled
 } from "./Services.styled";
 
-const Services = () => {
+const Services = ({ openModalCall }) => {
   const [tabId, setTabId] = useState(tabs[0].id);
   const [serviceId, setServiceId] = useState(null);
   const [serviceInside, setServiceInside] = useState(null);
@@ -53,6 +54,10 @@ const Services = () => {
   const handleBack = () => {
     handleResetServiceId();
     setServiceInside(false);
+  };
+
+  const handleClickCall = () => {
+    openModalCall();
   };
 
   const getBackground = () =>
@@ -111,11 +116,15 @@ const Services = () => {
         )}
         <Visual serviceInside={serviceInside}>
           <Photo background={getBackground()} />
-          <ButtonStyled>Хочу вызвать мастера</ButtonStyled>
+          <ButtonStyled onClick={handleClickCall}>
+            Хочу вызвать мастера
+          </ButtonStyled>
         </Visual>
       </Content>
     </ServicesStyled>
   );
 };
 
-export default Services;
+export default inject(({ modalStore }) => ({
+  openModalCall: modalStore.openModalCall
+}))(Services);

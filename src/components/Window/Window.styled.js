@@ -24,7 +24,7 @@ export const WindowStyled = styled.div`
 export const Content = styled.div`
   padding-top: 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
 export const Visual = styled.div`
@@ -74,19 +74,17 @@ export const Buttons = styled.div`
 export const Information = styled.div`
   margin-right: 56px;
   display: flex;
-  width: 50%;
 `;
 
 export const Colors = styled.div`
   margin-right: 16px;
-  width: 50%;
 `;
 
 export const Advantages = styled.div`
   padding-top: 106px;
   margin-left: -40px;
   display: flex;
-  width: 50%;
+  max-width: 600px;
   flex-wrap: wrap;
 `;
 
