@@ -7,8 +7,6 @@ import "react-image-lightbox/style.css";
 
 import { Element } from "react-scroll";
 
-import { store } from "../store/store";
-
 import Header from "../src/components/Header/Header";
 import FirstScreen from "../src/components/FirstScreen/FirstScreen";
 import Stocks from "../src/components/Stocks/Stocks";
@@ -23,6 +21,7 @@ import Repair from "../src/components/Repair/Repair";
 import Feedback from "../src/components/Feedback/Feedback";
 import Footer from "../src/components/Footer/Footer";
 import ModalSuccess from "../src/components/ModalSuccess/ModalSuccess";
+import ModalWindowCalculator from "../src/components/ModalWindowCalculator/ModalWindowCalculator";
 import ModalCall from "../src/components/ModalCall/ModalCall";
 import FixedButton from "../src/components/FixedButton/FixedButton";
 import Promo from "../src/components/Promo/Promo";
@@ -104,6 +103,7 @@ const App = () => {
       </Container>
       <ModalSuccess />
       <ModalCall />
+      <ModalWindowCalculator />
     </AppStyled>
   );
 };

@@ -99,6 +99,11 @@ export const Brand = styled.img`
           width: 150px;
           height: 24px;
         `;
+      case "logo-melke":
+        return css`
+          width: 51px;
+          height: 64px;
+        `;
       case "logo-kbe":
         return css`
           width: 86px;

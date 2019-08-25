@@ -25,7 +25,7 @@ import {
   AdvantageStyled
 } from "./Window.styled";
 
-const Window = ({ openModalCall }) => {
+const Window = ({ openModalCall, openModalWindowCalculator }) => {
   const defaultSlides = slides.filter(slide => slide.tags.includes(tags[0].id));
 
   const defaultValue = colors.list[0].colors[0].value;
@@ -107,6 +107,10 @@ const Window = ({ openModalCall }) => {
     openModalCall();
   };
 
+  const handleClickOpenWindowCalculator = () => {
+    openModalWindowCalculator();
+  };
+
   return (
     <WindowStyled>
       <Title>Подобрать окна</Title>
@@ -149,7 +153,9 @@ const Window = ({ openModalCall }) => {
                 <Button size="full" onClick={handleClickCall}>
                   Заказать окна
                 </Button>
-                <Button size="full">Рассчитать стоимость</Button>
+                <Button size="full" onClick={handleClickOpenWindowCalculator}>
+                  Рассчитать стоимость
+                </Button>
               </Buttons>
             </Slides>
           </Information>
@@ -170,5 +176,6 @@ const Window = ({ openModalCall }) => {
 };
 
 export default inject(({ modalStore }) => ({
-  openModalCall: modalStore.openModalCall
+  openModalCall: modalStore.openModalCall,
+  openModalWindowCalculator: modalStore.openModalWindowCalculator
 }))(Window);

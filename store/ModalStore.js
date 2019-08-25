@@ -14,7 +14,33 @@ class ModalStore {
   isShowModalCall = false;
 
   @observable
+  isShowModalWindowCalculator = false;
+
+  @observable
+  isShowModalBalconiesCalculator = false;
+
+  @observable
   hideCodeDiscount = false;
+
+  @action
+  openModalBalconiesCalculator = () => {
+    this.isShowModalBalconiesCalculator = true;
+  };
+
+  @action
+  closeModalBalconiesCalculator = () => {
+    this.isShowModalBalconiesCalculator = false;
+  };
+
+  @action
+  openModalWindowCalculator = () => {
+    this.isShowModalWindowCalculator = true;
+  };
+
+  @action
+  closeModalWindowCalculator = () => {
+    this.isShowModalWindowCalculator = false;
+  };
 
   @action
   openModalSuccess = () => {
