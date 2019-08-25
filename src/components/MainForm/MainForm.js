@@ -1,5 +1,8 @@
 import React from "react";
-import { useForm } from "../../utils/customHooks";
+import { inject } from "mobx-react";
+import useForm from "react-hook-form";
+
+import { validatePhone, validateName } from "../../utils/validate";
 
 import Button from "../Button/Button";
 
@@ -11,15 +14,16 @@ import {
   FieldStyled
 } from "./MainForm.styled";
 
-const MainForm = () => {
-  const formInfo = () => {
-    console.log(`User Created!, Name: ${inputs.name}, Phone: ${inputs.phone}`);
+const MainForm = ({ openModalSuccess }) => {
+  const { register, handleSubmit, errors } = useForm();
+
+  const onSubmit = (data, e) => {
+    e.target.reset();
+    openModalSuccess();
   };
 
-  const { inputs, handleInputChange, handleSubmit } = useForm({}, formInfo);
-
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit(onSubmit)}>
       <Title>
         Не знаете размеры?
         <br /> Закажите&nbsp;<strong>бесплатный</strong>&nbsp;замер
@@ -31,18 +35,21 @@ const MainForm = () => {
         <FieldStyled
           name="name"
           type="text"
-          value={inputs.name}
+          ref={register({
+            validate: validateName,
+            required: true
+          })}
           placeholder="Как к вам обращаться?"
-          error
-          onChange={handleInputChange}
+          error={errors.name && "Пожалуйста, введите русские символы"}
         />
         <FieldStyled
           name="phone"
-          type="text"
-          value={inputs.phone}
           placeholder="Ваш номер"
-          // error={}
-          onChange={handleInputChange}
+          ref={register({
+            validate: validatePhone,
+            required: true
+          })}
+          error={errors.phone && "Пожалуйста, введите правильные данные"}
         />
       </Fields>
       <Button type="submit" size="full">
@@ -52,4 +59,6 @@ const MainForm = () => {
   );
 };
 
-export default MainForm;
+export default inject(({ modalStore }) => ({
+  openModalSuccess: modalStore.openModalSuccess
+}))(MainForm);

@@ -1,6 +1,8 @@
 import React from "react";
 import { inject } from "mobx-react";
-import { useForm } from "../../utils/customHooks";
+import useForm from "react-hook-form";
+
+import { validatePhone, validateName } from "../../utils/validate";
 
 import Modal from "../Modal/Modal";
 
@@ -8,47 +10,51 @@ import {
   ModalCallStyled,
   Image,
   Title,
-  Header,
   Form,
   Description,
   FieldStyled,
   ButtonSubmit
 } from "./ModalCall.styled";
 
-const ModalCall = ({ closeModalCall, isShowModalCall }) => {
+const ModalCall = ({ closeModalCall, isShowModalCall, openModalSuccess }) => {
+  const { register, handleSubmit, errors } = useForm();
+
+  const onSubmit = (data, e) => {
+    e.target.reset();
+    openModalSuccess();
+    handleClose();
+  };
+
   const handleClose = () => {
     closeModalCall();
   };
-
-  const formInfo = () => {
-    console.log(
-      inputs,
-      `User Created!, Name: ${inputs.name}, Phone: ${inputs.reviews}`
-    );
-  };
-
-  const { inputs, handleInputChange, handleSubmit } = useForm({}, formInfo);
 
   return (
     <Modal isShow={isShowModalCall} onClose={handleClose}>
       <ModalCallStyled>
         <Image />
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit(onSubmit)}>
           <Title>Вызвать мастера</Title>
           <Description>Мы перезвоним вам в течении 15 минут</Description>
           <FieldStyled
             name="name"
             type="text"
-            value={inputs.name}
+            ref={register({
+              validate: validateName,
+              required: true
+            })}
             placeholder="Как к вам обращаться?"
-            onChange={handleInputChange}
+            error={errors.name && "Пожалуйста, введите русские символы"}
           />
           <FieldStyled
             name="phone"
             type="text"
-            value={inputs.phone}
             placeholder="Ваш номер"
-            onChange={handleInputChange}
+            ref={register({
+              validate: validatePhone,
+              required: true
+            })}
+            error={errors.phone && "Пожалуйста, введите правильные данные"}
           />
           <ButtonSubmit type="submit" size="full">
             Перезвоните мне
@@ -61,5 +67,6 @@ const ModalCall = ({ closeModalCall, isShowModalCall }) => {
 
 export default inject(({ modalStore }) => ({
   closeModalCall: modalStore.closeModalCall,
+  openModalSuccess: modalStore.openModalSuccess,
   isShowModalCall: modalStore.isShowModalCall
 }))(ModalCall);

@@ -1,9 +1,22 @@
 import styled, { css } from "styled-components";
-import { colors } from "../../variables";
+import { colors, font } from "../../variables";
 import { Close } from "../Icons/Close";
 
-export const Container = styled.div`
+export const FieldFilesStyled = styled.div`
+  position: relative;
   margin-bottom: 24px;
+
+  ${props =>
+    props.error &&
+    css`
+      ${Error} {
+        opacity: 1;
+        visibility: visible;
+      }
+    `};
+`;
+
+export const Container = styled.div`
   position: relative;
   overflow: hidden;
 `;
@@ -31,6 +44,7 @@ export const Files = styled.div`
 `;
 
 export const File = styled.div`
+  position: relative;
   width: 104px;
   height: 104px;
   display: flex;
@@ -54,9 +68,46 @@ export const ImageWrap = styled.div`
 export const Image = styled.img`
   width: 100%;
   height: 100%;
+  object-fit: contain;
 `;
 
 export const Plus = styled(Close)`
   transform: rotate(45deg);
   color: ${colors.gray};
+`;
+
+export const ButtonRemove = styled.button`
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  color: ${colors.main};
+  background-color: transparent;
+  border: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: ${colors.orange};
+  }
+`;
+
+export const CloseIcon = styled(Close)`
+  width: 100%;
+  height: 100%;
+  color: inherit;
+`;
+
+export const Error = styled.span`
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  display: block;
+  font-family: ${font.openSans};
+  font-size: 12px;
+  color: ${colors.softRed};
+  transition: opacity 0.3s;
 `;

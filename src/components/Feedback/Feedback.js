@@ -1,6 +1,10 @@
 import React from "react";
+import { inject } from "mobx-react";
+import useForm from "react-hook-form";
 
-import { 
+import { validatePhone, validateName } from "../../utils/validate";
+
+import {
   FeedbackStyled,
   GetDiscountStyled,
   Title,
@@ -11,35 +15,54 @@ import {
   ButtonStyled
 } from "./Feedback.styled";
 
-const Feedback = () => (
-  <FeedbackStyled>
-    <GetDiscountStyled>
-      <Title>Не&nbsp;упустите шанс</Title>
-      <Subtitle>Найдите промокод на&nbsp;странице и&nbsp;получите скидку!</Subtitle>
-    </GetDiscountStyled>
+const Feedback = ({ openModalSuccess }) => {
+  const { register, handleSubmit, errors } = useForm();
 
-    <Form>
-      <Fields>
-        <FieldStyled
-          name="name"
-          type="text"
-          placeholder="Как к вам обращаться?"
-          error
-          size="full"
-        />
-        <FieldStyled
-          name="phone"
-          type="tel"
-          placeholder="Ваш номер"
-          size="full"
-        />
-      </Fields>
-      <ButtonStyled theme="tetriary">
-        Перезвоните мне
-      </ButtonStyled>
-    </Form>
+  const onSubmit = (data, e) => {
+    e.target.reset();
+    openModalSuccess();
+  };
 
-  </FeedbackStyled>
-);
+  return (
+    <FeedbackStyled>
+      <GetDiscountStyled>
+        <Title>Не&nbsp;упустите шанс</Title>
+        <Subtitle>
+          Найдите промокод на&nbsp;странице и&nbsp;получите скидку!
+        </Subtitle>
+      </GetDiscountStyled>
 
-export default Feedback;
+      <Form onSubmit={handleSubmit(onSubmit)}>
+        <Fields>
+          <FieldStyled
+            name="name"
+            ref={register({
+              validate: validateName,
+              required: true
+            })}
+            placeholder="Как к вам обращаться?"
+            error={errors.name && "Пожалуйста, введите русские символы"}
+            size="full"
+          />
+          <FieldStyled
+            name="phone"
+            placeholder="Ваш номер"
+            ref={register({
+              validate: validatePhone,
+              required: true
+            })}
+            error={errors.phone && "Пожалуйста, введите правильные данные"}
+            size="full"
+          />
+        </Fields>
+        <ButtonStyled type="submit" theme="tetriary">
+          Перезвоните мне
+        </ButtonStyled>
+      </Form>
+    </FeedbackStyled>
+  );
+};
+
+export default inject(({ modalStore }) => ({
+  openModalSuccess: modalStore.openModalSuccess
+}))(Feedback);

@@ -1,5 +1,6 @@
 import React from "react";
 import { PropTypes as pt } from "prop-types";
+import { inject } from "mobx-react";
 
 import Button from "../Button/Button";
 import Radiobutton from "../Radiobutton/Radiobutton";
@@ -35,7 +36,9 @@ const WindowColor = ({
   onClick,
   checkedValue,
   currentColorData,
-  className
+  className,
+  openModalCall,
+  openModalWindowCalculator
 }) => {
   const handleChangeColor = e => {
     const categoryValue = e.target.value;
@@ -48,6 +51,14 @@ const WindowColor = ({
   const handleClickNext = () => {
     onClickNext();
   };
+
+  const handleOpenModalCall = () => {
+    openModalCall();
+  };
+
+  // const handleOpenModalWindow = () => {
+  //   openModalWindowCalculator();
+  // };
 
   const slideCount = listColors.length - 1;
 
@@ -95,8 +106,12 @@ const WindowColor = ({
           </Slides>
           <PriceStyled price={price} />
           <Buttons>
-            <Button size="full">Заказать окна</Button>
-            <Button size="full">Рассчитать стоимость</Button>
+            <Button size="full" onClick={handleOpenModalCall}>
+              Заказать окна
+            </Button>
+            {/* <Button size="full" onClick={handleOpenModalWindow}>
+              Рассчитать стоимость
+            </Button> */}
           </Buttons>
         </Info>
       </Content>
@@ -116,4 +131,7 @@ WindowColor.propTypes = {
   checkedValue: pt.string
 };
 
-export default WindowColor;
+export default inject(({ modalStore }) => ({
+  openModalCall: modalStore.openModalCall,
+  openModalWindowCalculator: modalStore.openModalWindowCalculator
+}))(WindowColor);

@@ -5,6 +5,9 @@ class ModalStore {
   isShowModalSuccess = false;
 
   @observable
+  isShowModalReviewSuccess = false;
+
+  @observable
   isShowModalReview = false;
 
   @observable
@@ -14,7 +17,43 @@ class ModalStore {
   isShowModalCall = false;
 
   @observable
+  isShowModalWindowCalculator = false;
+
+  @observable
+  isShowModalBalconiesCalculator = false;
+
+  @observable
   hideCodeDiscount = false;
+
+  @action
+  openModalBalconiesCalculator = () => {
+    this.isShowModalBalconiesCalculator = true;
+  };
+
+  @action
+  closeModalBalconiesCalculator = () => {
+    this.isShowModalBalconiesCalculator = false;
+  };
+
+  @action
+  openModalWindowCalculator = () => {
+    this.isShowModalWindowCalculator = true;
+  };
+
+  @action
+  closeModalWindowCalculator = () => {
+    this.isShowModalWindowCalculator = false;
+  };
+
+  @action
+  openModalReviewSuccess = () => {
+    this.isShowModalReviewSuccess = true;
+  };
+
+  @action
+  closeModalReviewSuccess = () => {
+    this.isShowModalReviewSuccess = false;
+  };
 
   @action
   openModalSuccess = () => {
@@ -38,7 +77,6 @@ class ModalStore {
 
   @action
   openModalCall = () => {
-    console.log("open");
     this.isShowModalCall = true;
   };
 

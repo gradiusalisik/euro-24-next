@@ -17,7 +17,7 @@ export const Container = styled.div`
   padding-right: 56px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 `;
 
@@ -98,6 +98,11 @@ export const Brand = styled.img`
         return css`
           width: 150px;
           height: 24px;
+        `;
+      case "logo-melke":
+        return css`
+          width: 51px;
+          height: 64px;
         `;
       case "logo-kbe":
         return css`

@@ -1,38 +1,66 @@
 import React from "react";
 import { PropTypes as pt } from "prop-types";
-
 import { FieldStyled, Input, Error } from "./Field.styled";
+import InputMask from "react-input-mask";
 
-const Field = ({
-  error,
-  name,
-  onChange,
-  type,
-  placeholder,
-  filled,
-  className,
-  size
-}) => (
-  <FieldStyled error={error} filled={filled} size={size} className={className}>
-    <Input
-      onChange={onChange}
-      placeholder={placeholder}
-      type={type}
-      name={name}
+const Field = React.forwardRef(
+  (
+    {
+      error,
+      name,
+      onChange,
+      type,
+      placeholder,
+      filled,
+      className,
+      value,
+      size,
+      required
+    },
+    ref
+  ) => (
+    <FieldStyled
+      error={error}
+      filled={filled}
       size={size}
-    />
-    {error && <Error>Пожалуйста, введите правильные данные</Error>}
-  </FieldStyled>
+      className={className}
+    >
+      {console.log(value, "value")}
+      {name === "phone" ? (
+        <InputMask
+          onChange={onChange}
+          placeholder={placeholder}
+          type={type}
+          name={name}
+          mask="+7 (999) 999-99-99"
+          value={value}
+          required={required}
+          inputRef={ref}
+        />
+      ) : (
+        <Input
+          onChange={onChange}
+          placeholder={placeholder}
+          type={type}
+          name={name}
+          value={value}
+          required={required}
+          ref={ref}
+        />
+      )}
+      {error && <Error>{error}</Error>}
+    </FieldStyled>
+  )
 );
 
 Field.propTypes = {
-  error: pt.bool,
+  error: pt.string,
   name: pt.string,
   type: pt.string,
   placeholder: pt.string,
   filled: pt.bool,
   onChange: pt.func,
-  size: pt.string,
+  size: pt.string
 };
 
 Field.defaultProps = {

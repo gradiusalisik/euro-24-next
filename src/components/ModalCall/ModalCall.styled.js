@@ -41,7 +41,7 @@ export const Form = styled.form`
 `;
 
 export const FieldStyled = styled(Field)`
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 `;
 
 export const ButtonSubmit = styled(Button)`

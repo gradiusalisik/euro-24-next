@@ -6,6 +6,7 @@ const LogoSalamander = "/static/img/brands/logo-salamander.svg";
 const LogoSchuco = "/static/img/brands/logo-schuco.svg";
 const LogoTrocal = "/static/img/brands/logo-trocal.svg";
 const LogoVeka = "/static/img/brands/logo-veka.svg";
+const LogoMelke = "/static/img/brands/logo-melke.svg";
 
 export const firstScreen = {
   title:
@@ -25,6 +26,10 @@ export const firstScreen = {
     {
       id: "logo-schuco",
       brand: LogoSchuco
+    },
+    {
+      id: "logo-melke",
+      brand: LogoMelke
     },
     {
       id: "logo-kbe",
