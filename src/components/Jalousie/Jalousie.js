@@ -46,6 +46,7 @@ const Jalousie = ({ openModalCallJalouse, getTitleJalouse }) => {
   );
 };
 
-export default inject(({ modalStore }) => ({
-  openModalCallJalouse: modalStore.openModalCallJalouse
+export default inject(({ modalStore, formStore }) => ({
+  openModalCallJalouse: modalStore.openModalCallJalouse,
+  getTitleJalouse: formStore.getTitleJalouse
 }))(Jalousie);

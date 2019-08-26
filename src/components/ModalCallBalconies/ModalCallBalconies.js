@@ -47,7 +47,7 @@ const ModalCallBalconies = ({
         <Image />
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Title>Вызвать мастера</Title>
-          <Description>Мы перезвоним вам в течении 15 минут</Description>
+          <Description>Мы перезвоним вам в течении 10 минут</Description>
           <FieldStyled
             name="name"
             type="text"

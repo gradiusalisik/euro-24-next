@@ -33,7 +33,7 @@ const MainForm = ({ openModalSuccess, send }) => {
         <br /> Закажите&nbsp;<strong>бесплатный</strong>&nbsp;замер
       </Title>
       <Description>
-        Наши специалисты свяжутся с вами в течении 15 минут.
+        Наши специалисты свяжутся с вами в течении 10 минут.
       </Description>
       <Fields>
         <FieldStyled

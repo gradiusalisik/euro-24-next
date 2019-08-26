@@ -4,6 +4,10 @@ const ExampleImage3 = "static/img/portfolio/example3.jpg";
 const ExampleImage4 = "static/img/portfolio/example4.jpg";
 const ExampleImage5 = "static/img/portfolio/example5.jpg";
 
+const Video1 = "static/video/portfolio/first.mp4";
+const Video2 = "static/video/portfolio/second.mp4";
+const Poster = "static/video/portfolio/poster/example.jpg";
+
 export const tags = [
   {
     id: "window",
@@ -30,17 +34,20 @@ export const tags = [
 export const slides = [
   {
     id: "1",
-    image: ExampleImage,
+    video: Video1,
+    poster: Poster,
     tags: ["window"]
   },
   {
     id: "2",
-    image: ExampleImage,
+    video: Video1,
+    poster: Poster,
     tags: ["window"]
   },
   {
     id: "3",
-    image: ExampleImage,
+    video: Video2,
+    poster: Poster,
     tags: ["window"]
   },
   {

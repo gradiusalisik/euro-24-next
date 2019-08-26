@@ -13,3 +13,12 @@ export const Image = styled.img`
   height: 336px;
   object-fit: cover;
 `;
+
+export const Video = styled.video`
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-top: 24px;
+  width: 100%;
+  height: 336px;
+  object-fit: cover;
+`;

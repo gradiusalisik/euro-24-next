@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { PropTypes as pt } from "prop-types";
-import { SliderPortfolioStyled, Image } from "./SliderPortfolio.styled";
 import LightboxSlide from "../LightboxSlide/LightboxSlide";
+
+import { SliderPortfolioStyled, Image, Video } from "./SliderPortfolio.styled";
 
 const SliderPortfolio = React.forwardRef(({ slides, changeSlider }, ref) => {
   const [isOpenSlides, setOpenSlides] = useState(false);
@@ -33,15 +34,28 @@ const SliderPortfolio = React.forwardRef(({ slides, changeSlider }, ref) => {
 
   return (
     <SliderPortfolioStyled {...settings} ref={ref}>
-      {slides.map(slide => (
-        <Image
-          key={slide.id}
-          src={slide.image}
-          category={slide.category}
-          alt={slide.category}
-          onClick={handleOpenSlides(slide.id)}
-        />
-      ))}
+      {slides.map(slide =>
+        slide.image ? (
+          <Image
+            key={slide.id}
+            src={slide.image}
+            category={slide.category}
+            alt={slide.category}
+            onClick={handleOpenSlides(slide.id)}
+          />
+        ) : (
+          <Video
+            key={slide.id}
+            src={slide.video}
+            category={slide.category}
+            controls="controls"
+            alt={slide.category}
+            poster={slide.poster}
+          >
+            <source src={slide.video} type="video/mp4" />
+          </Video>
+        )
+      )}
       {isOpenSlides && (
         <LightboxSlide
           onClose={handleCloseSlides}
