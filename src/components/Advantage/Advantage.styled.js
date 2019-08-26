@@ -4,6 +4,7 @@ import { colors } from "../../variables";
 export const Title = styled.h4`
   font-size: 14px;
   font-weight: bold;
+  line-height: normal;
   color: ${colors.main};
 `;
 
