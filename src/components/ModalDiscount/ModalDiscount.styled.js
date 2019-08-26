@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { colors } from "../../variables";
 import Button from "../Button/Button";
 import { Discount } from "../Icons/Discount";
-const BackgroundModal = "/static/img/promo/background-modal.png";
+const BackgroundModal = "static/img/promo/background-modal.png";
 
 export const ModalDiscountStyled = styled.div`
   position: relative;

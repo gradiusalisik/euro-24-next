@@ -17,6 +17,21 @@ class ModalStore {
   isShowModalCall = false;
 
   @observable
+  isShowModalCallWindow = false;
+
+  @observable
+  isShowModalCallNets = false;
+
+  @observable
+  isShowModalCallJalouse = false;
+
+  @observable
+  isShowModalCallBalconies = false;
+
+  @observable
+  isShowModalCallCupboard = false;
+
+  @observable
   isShowModalWindowCalculator = false;
 
   @observable
@@ -83,6 +98,56 @@ class ModalStore {
   @action
   closeModalCall = () => {
     this.isShowModalCall = false;
+  };
+
+  @action
+  openModalCallWindow = () => {
+    this.isShowModalCallWindow = true;
+  };
+
+  @action
+  closeModalCallWindow = () => {
+    this.isShowModalCallWindow = false;
+  };
+
+  @action
+  openModalCallNets = () => {
+    this.isShowModalCallNets = true;
+  };
+
+  @action
+  closeModalCallNets = () => {
+    this.isShowModalCallNets = false;
+  };
+
+  @action
+  openModalCallJalouse = () => {
+    this.isShowModalCallJalouse = true;
+  };
+
+  @action
+  closeModalCallJalouse = () => {
+    this.isShowModalCallJalouse = false;
+  };
+
+  @action
+  openModalCallBalconies = () => {
+    this.isShowModalCallBalconies = true;
+  };
+
+  @action
+  closeModalCallBalconies = () => {
+    this.isShowModalCallBalconies = false;
+  };
+
+  @action
+  openModalCallCupboard = () => {
+    this.isShowModalCallCupboard = true;
+  };
+
+  @action
+  closeModalCallCupboard = () => {
+    this.isShowModalCallCupboard = false;
   };
 
   @action

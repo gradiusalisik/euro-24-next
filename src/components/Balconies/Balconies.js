@@ -18,7 +18,7 @@ import {
   Info
 } from "./Balconies.styled";
 
-const Balconies = ({ openModalCall }) => {
+const Balconies = ({ openModalCallBalconies, getTitleBalconies }) => {
   const [tabId, setTabId] = useState(tabs[0].id);
 
   const handleClick = id => {
@@ -30,8 +30,10 @@ const Balconies = ({ openModalCall }) => {
   const background = balconies[count].background;
   const advantages = balconies[count].advantages;
   const alt = balconies[count].id;
+
   const handleClickCall = () => {
-    openModalCall();
+    getTitleBalconies(balconies[count].title);
+    openModalCallBalconies();
   };
 
   return (
@@ -62,6 +64,7 @@ const Balconies = ({ openModalCall }) => {
   );
 };
 
-export default inject(({ modalStore }) => ({
-  openModalCall: modalStore.openModalCall
+export default inject(({ modalStore, formStore }) => ({
+  openModalCallBalconies: modalStore.openModalCallBalconies,
+  getTitleBalconies: formStore.getTitleBalconies
 }))(Balconies);

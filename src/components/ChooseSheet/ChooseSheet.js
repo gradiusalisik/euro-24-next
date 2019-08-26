@@ -24,7 +24,8 @@ const ChooseSheet = ({
   price,
   onClickBack,
   className,
-  openModalCall
+  openModalCallNets,
+  getValueNets
 }) => {
   const [valueSheet, setValueSheet] = useState(sheets[0].value);
   const [titleSheet, setTitleSheet] = useState(sheets[0].title);
@@ -35,7 +36,8 @@ const ChooseSheet = ({
   };
 
   const handleClickCall = () => {
-    openModalCall();
+    getValueNets(titleSheet);
+    openModalCallNets();
   };
 
   return (
@@ -83,6 +85,7 @@ ChooseSheet.propTypes = {
   price: pt.string
 };
 
-export default inject(({ modalStore }) => ({
-  openModalCall: modalStore.openModalCall
+export default inject(({ modalStore, formStore }) => ({
+  openModalCallNets: modalStore.openModalCallNets,
+  getValueNets: formStore.getValueNets
 }))(ChooseSheet);

@@ -14,29 +14,35 @@ import {
   Description,
   FieldStyled,
   ButtonSubmit
-} from "./ModalCall.styled";
+} from "../ModalCall/ModalCall.styled";
 
-const ModalCall = ({
-  closeModalCall,
-  isShowModalCall,
+const ModalCallNets = ({
+  closeModalCallNets,
+  isShowModalCallNets,
   openModalSuccess,
-  send
+  send,
+  titleNets,
+  valueNets
 }) => {
   const { register, handleSubmit, errors } = useForm();
 
   const onSubmit = (data, e) => {
     e.target.reset();
     openModalSuccess();
-    send(data);
+    send({
+      ...data,
+      titleNets,
+      valueNets
+    });
     handleClose();
   };
 
   const handleClose = () => {
-    closeModalCall();
+    closeModalCallNets();
   };
 
   return (
-    <Modal isShow={isShowModalCall} onClose={handleClose}>
+    <Modal isShow={isShowModalCallNets} onClose={handleClose}>
       <ModalCallStyled>
         <Image />
         <Form onSubmit={handleSubmit(onSubmit)}>
@@ -72,8 +78,10 @@ const ModalCall = ({
 };
 
 export default inject(({ modalStore, formStore }) => ({
-  closeModalCall: modalStore.closeModalCall,
+  closeModalCallNets: modalStore.closeModalCallNets,
   openModalSuccess: modalStore.openModalSuccess,
-  isShowModalCall: modalStore.isShowModalCall,
-  send: formStore.send
-}))(ModalCall);
+  isShowModalCallNets: modalStore.isShowModalCallNets,
+  send: formStore.send,
+  titleNets: formStore.titleNets,
+  valueNets: formStore.valueNets
+}))(ModalCallNets);

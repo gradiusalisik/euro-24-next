@@ -21,7 +21,7 @@ const RadioChoiceHouse = ({ onClickHouse }) => {
   return (
     <ChoiceHouseStyled>
       <ImageIcon
-        src="/static/img/window/ic-choose-house.svg"
+        src="static/img/window/ic-choose-house.svg"
         alt="choice-house"
       />
       <Content>
@@ -34,14 +34,14 @@ const RadioChoiceHouse = ({ onClickHouse }) => {
         <Buttons>
           <Button onClick={handleChoiceHouse("panel-block-house")}>
             <Image
-              src="/static/img/window/ic-house-brick.svg"
+              src="static/img/window/ic-house-brick.svg"
               alt="panel-block-house"
             />
             <Text>Панельный / блочный дом</Text>
           </Button>
           <Button onClick={handleChoiceHouse("brick-house")}>
             <Image
-              src="/static/img/window/ic-house-brick.svg"
+              src="static/img/window/ic-house-brick.svg"
               alt="brick-house"
             />
             <Text>Кирпичный дом</Text>

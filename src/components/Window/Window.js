@@ -25,7 +25,12 @@ import {
   AdvantageStyled
 } from "./Window.styled";
 
-const Window = ({ openModalCall, openModalWindowCalculator }) => {
+const Window = ({
+  openModalCallWindow,
+  openModalWindowCalculator,
+  getTitleWindow,
+  getColorWindow
+}) => {
   const defaultSlides = slides.filter(slide => slide.tags.includes(tags[0].id));
 
   const defaultValue = colors.list[0].colors[0].value;
@@ -57,7 +62,8 @@ const Window = ({ openModalCall, openModalWindowCalculator }) => {
   useEffect(() => {
     setBackground(newSlides[count].background);
     setAdvantages(newSlides[count].advantages);
-  }, [count, newSlides]);
+    getTitleWindow(newSlides[count].title);
+  }, [count, getTitleWindow, newSlides]);
 
   useEffect(() => {
     setCheckedValue(colors.list[currentSlideColor].colors[0].value);
@@ -69,7 +75,8 @@ const Window = ({ openModalCall, openModalWindowCalculator }) => {
     );
     const currentData = currentFind || defaultValue;
     setCurrentColorData(currentData);
-  }, [checkedValue, currentSlideColor, defaultValue]);
+    getColorWindow(checkedValue);
+  }, [checkedValue, currentSlideColor, defaultValue, getColorWindow]);
 
   const handleClickPrev = () => {
     setCount(count - 1);
@@ -104,7 +111,7 @@ const Window = ({ openModalCall, openModalWindowCalculator }) => {
   };
 
   const handleClickCall = () => {
-    openModalCall();
+    openModalCallWindow();
   };
 
   // const handleClickOpenWindowCalculator = () => {
@@ -175,7 +182,9 @@ const Window = ({ openModalCall, openModalWindowCalculator }) => {
   );
 };
 
-export default inject(({ modalStore }) => ({
-  openModalCall: modalStore.openModalCall,
-  openModalWindowCalculator: modalStore.openModalWindowCalculator
+export default inject(({ modalStore, formStore }) => ({
+  openModalCallWindow: modalStore.openModalCallWindow,
+  openModalWindowCalculator: modalStore.openModalWindowCalculator,
+  getTitleWindow: formStore.getTitleWindow,
+  getColorWindow: formStore.getColorWindow
 }))(Window);

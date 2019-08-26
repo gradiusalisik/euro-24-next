@@ -50,7 +50,7 @@ const ModalWindowCalculator = ({
     <ChoiceWindow>
       <Header>
         <ImageWindow
-          src="/static/img/window/ic-count-windows.svg"
+          src="static/img/window/ic-count-windows.svg"
           alt="count-window"
         />
         <Info>
@@ -72,7 +72,7 @@ const ModalWindowCalculator = ({
     <ChoiceWindow>
       <Header>
         <ImageTypeWindow
-          src="/static/img/window/ic-measure.svg"
+          src="static/img/window/ic-measure.svg"
           alt="type-window"
         />
         <Info>
@@ -92,7 +92,7 @@ const ModalWindowCalculator = ({
   const renderLastStep = () => (
     <ChoiceWindow>
       <Header>
-        <ImageLastStep src="/static/img/window/ic-ruler.svg" alt="ruler" />
+        <ImageLastStep src="static/img/window/ic-ruler.svg" alt="ruler" />
         <Info>
           <Title>Измерения</Title>
           <SubTitle>Расчет стоимости</SubTitle>

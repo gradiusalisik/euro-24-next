@@ -1,7 +1,7 @@
 import modalStore from "./ModalStore";
-
-// con
+import formStore from "./FormStore";
 
 export const store = {
-  modalStore
+  modalStore,
+  formStore
 };

@@ -37,7 +37,7 @@ const WindowColor = ({
   checkedValue,
   currentColorData,
   className,
-  openModalCall,
+  openModalCallWindow,
   openModalWindowCalculator
 }) => {
   const handleChangeColor = e => {
@@ -53,7 +53,7 @@ const WindowColor = ({
   };
 
   const handleOpenModalCall = () => {
-    openModalCall();
+    openModalCallWindow();
   };
 
   // const handleOpenModalWindow = () => {
@@ -132,6 +132,6 @@ WindowColor.propTypes = {
 };
 
 export default inject(({ modalStore }) => ({
-  openModalCall: modalStore.openModalCall,
+  openModalCallWindow: modalStore.openModalCallWindow,
   openModalWindowCalculator: modalStore.openModalWindowCalculator
 }))(WindowColor);
