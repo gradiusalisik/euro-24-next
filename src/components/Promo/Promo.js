@@ -14,8 +14,9 @@ import {
 
 const PromoImage = "static/img/promo/illustration-size.svg";
 
-const Promo = ({ hideCodeDiscount, openModalDiscount }) => {
+const Promo = ({ hideCodeDiscount, openModalDiscount, setDiscount }) => {
   const handleOpenDiscount = () => {
+    setDiscount();
     openModalDiscount();
   };
 
@@ -39,7 +40,8 @@ const Promo = ({ hideCodeDiscount, openModalDiscount }) => {
   );
 };
 
-export default inject(({ modalStore }) => ({
+export default inject(({ modalStore, formStore }) => ({
   hideCodeDiscount: modalStore.hideCodeDiscount,
-  openModalDiscount: modalStore.openModalDiscount
+  openModalDiscount: modalStore.openModalDiscount,
+  setDiscount: formStore.setDiscount
 }))(Promo);

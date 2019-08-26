@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { inject } from "mobx-react";
 import useForm from "react-hook-form";
 
@@ -14,11 +14,15 @@ import {
   FieldStyled
 } from "./MainForm.styled";
 
-const MainForm = ({ openModalSuccess }) => {
+const MainForm = ({ openModalSuccess, send }) => {
   const { register, handleSubmit, errors } = useForm();
+  const maskEl = useRef();
 
   const onSubmit = (data, e) => {
+    send(data);
+
     e.target.reset();
+    maskEl.current.value = "";
     openModalSuccess();
   };
 
@@ -29,26 +33,31 @@ const MainForm = ({ openModalSuccess }) => {
         <br /> Закажите&nbsp;<strong>бесплатный</strong>&nbsp;замер
       </Title>
       <Description>
-        Наши специалисты свяжутся с вами в течении 15 минут.
+        Наши специалисты свяжутся с вами в течении 10 минут.
       </Description>
       <Fields>
         <FieldStyled
           name="name"
           type="text"
-          ref={register({
-            validate: validateName,
-            required: true
-          })}
+          ref={{
+            ref: register({
+              validate: validateName,
+              required: true
+            })
+          }}
           placeholder="Как к вам обращаться?"
           error={errors.name && "Пожалуйста, введите русские символы"}
         />
         <FieldStyled
           name="phone"
           placeholder="Ваш номер"
-          ref={register({
-            validate: validatePhone,
-            required: true
-          })}
+          ref={{
+            ref: maskEl,
+            inputRef: register({
+              validate: validatePhone,
+              required: true
+            })
+          }}
           error={errors.phone && "Пожалуйста, введите правильные данные"}
         />
       </Fields>
@@ -59,6 +68,7 @@ const MainForm = ({ openModalSuccess }) => {
   );
 };
 
-export default inject(({ modalStore }) => ({
-  openModalSuccess: modalStore.openModalSuccess
+export default inject(({ modalStore, formStore }) => ({
+  openModalSuccess: modalStore.openModalSuccess,
+  send: formStore.send
 }))(MainForm);

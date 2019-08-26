@@ -16,24 +16,25 @@ export const TagStyled = styled.button`
   background-color: ${colors.white};
   border: 1px solid ${colors.gray};
   cursor: pointer;
-  transition: border 0.3s, color 0.3s, background-color 0.3s;
+  transition: border-color 0.3s, color 0.3s, background-color 0.3s;
+  will-change: border-color, color, background-color;
 
   &:hover {
     color: ${colors.brightblue};
-    border: 1px solid ${colors.brightblue};
+    border-color: ${colors.brightblue};
   }
 
   ${props =>
     props.isActive &&
     css`
-      border: 1px solid transparent;
       color: ${colors.white};
       background-color: ${colors.brightblue};
+      border-color: transparent;
 
       &:hover {
         color: ${colors.white};
         background-color: ${colors.vividBlue};
-        border: 1px solid transparent;
+        border-color: transparent;
       }
     `}
 `;

@@ -22,9 +22,10 @@ const ModalReview = ({
   closeModalReview,
   isShowModalReview,
   openModalReviewSuccess,
-  send
+  send,
+  myFiles,
+  resetFiles
 }) => {
-  const [myFiles, setMyfiles] = useState([]);
   const [isErrorFiles, setErrorFiles] = useState(false);
   const [isSubmitCheck, setSubmitCheck] = useState(false);
 
@@ -45,9 +46,9 @@ const ModalReview = ({
       files: myFiles
     });
     handleClose();
+    resetFiles();
+    setSubmitCheck(false);
   };
-
-  const setFiles = files => setMyfiles(files);
 
   useEffect(() => {
     setErrorFiles(myFiles.length === 0);
@@ -72,10 +73,12 @@ const ModalReview = ({
           <FieldStyled
             name="name"
             type="text"
-            ref={register({
-              validate: validateName,
-              required: true
-            })}
+            ref={{
+              ref: register({
+                validate: validateName,
+                required: true
+              })
+            }}
             placeholder="Как к вам обращаться?"
             error={errors.name && "Пожалуйста, введите русские символы"}
           />
@@ -91,13 +94,12 @@ const ModalReview = ({
           <FieldStyled
             name="video"
             type="text"
+            ref={{
+              ref: register
+            }}
             placeholder="Ссылка на видео-отзыв (необязательно)"
           />
-          <FieldFiles
-            name="files"
-            handleParentFiles={setFiles}
-            error={isSubmitCheck && isErrorFiles}
-          />
+          <FieldFiles name="files" error={isSubmitCheck && isErrorFiles} />
           <ButtonSubmit type="submit" size="full" onClick={handleClick}>
             Оставить отзыв
           </ButtonSubmit>
@@ -111,5 +113,7 @@ export default inject(({ modalStore, formStore }) => ({
   closeModalReview: modalStore.closeModalReview,
   openModalReviewSuccess: modalStore.openModalReviewSuccess,
   isShowModalReview: modalStore.isShowModalReview,
-  send: formStore.send
+  send: formStore.send,
+  resetFiles: formStore.resetFiles,
+  myFiles: formStore.myFiles
 }))(ModalReview);

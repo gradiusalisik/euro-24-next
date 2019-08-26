@@ -25,7 +25,7 @@ const Header = ({ isScroll, className, openModalCall }) => {
   return (
     <HeaderStyled isScroll={isScroll} className={className}>
       <Left>
-        <LogoStyled />
+        <LogoStyled src="static/img/header/logo.png" alt="logo" />
         <Menu menu={menu} />
       </Left>
 

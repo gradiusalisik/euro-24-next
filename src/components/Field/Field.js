@@ -17,7 +17,7 @@ const Field = React.forwardRef(
       size,
       required
     },
-    ref
+    { ref, inputRef }
   ) => (
     <FieldStyled
       error={error}
@@ -27,6 +27,7 @@ const Field = React.forwardRef(
     >
       {name === "phone" ? (
         <InputMask
+          ref={ref}
           onChange={onChange}
           placeholder={placeholder}
           type="tel"
@@ -34,7 +35,7 @@ const Field = React.forwardRef(
           mask="+7 (999) 999-99-99"
           value={value}
           required={required}
-          inputRef={ref}
+          inputRef={inputRef}
         />
       ) : (
         <Input

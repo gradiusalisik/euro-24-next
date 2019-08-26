@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { inject } from "mobx-react";
 import { useDropzone } from "react-dropzone";
 
 import {
@@ -16,9 +17,14 @@ import {
   Error
 } from "./FieldFiles.styled";
 
-const FieldFiles = ({ name, error, handleParentFiles }) => {
-  const [myFiles, setMyFiles] = useState([]);
-
+const FieldFiles = ({
+  name,
+  error,
+  handleParentFiles,
+  myFiles,
+  setMyFiles,
+  removeFile
+}) => {
   const onDrop = acceptedFiles => {
     const newFiles = acceptedFiles.map(file =>
       Object.assign(file, {
@@ -36,9 +42,7 @@ const FieldFiles = ({ name, error, handleParentFiles }) => {
   });
 
   const handleRemoveFile = file => () => {
-    const newFiles = [...myFiles];
-    newFiles.splice(newFiles.indexOf(file), 1);
-    setMyFiles(newFiles);
+    removeFile(file);
   };
 
   const renderImage = file => (
@@ -67,12 +71,11 @@ const FieldFiles = ({ name, error, handleParentFiles }) => {
       setMyFiles(resultFiles);
     }
 
-    handleParentFiles(myFiles);
     return () => {
       // Make sure to revoke the data uris to avoid memory leaks
       myFiles.forEach(file => URL.revokeObjectURL(file.preview));
     };
-  }, [handleParentFiles, myFiles]);
+  }, [handleParentFiles, myFiles, setMyFiles]);
 
   return (
     <FieldFilesStyled error={error}>
@@ -90,4 +93,8 @@ const FieldFiles = ({ name, error, handleParentFiles }) => {
   );
 };
 
-export default FieldFiles;
+export default inject(({ formStore }) => ({
+  myFiles: formStore.myFiles,
+  setMyFiles: formStore.setMyFiles,
+  removieFile: formStore.removieFile
+}))(FieldFiles);

@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 import { colors, font } from "../../variables";
-import { Logo } from "../Icons/Logo";
 
 export const HeaderStyled = styled.header`
   padding: 32px 56px;
@@ -23,8 +22,8 @@ export const HeaderStyled = styled.header`
       transition: transform ease-out 0.3s;
 
       ${LogoStyled} {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 54px;
       }
     `}
 `;
@@ -34,10 +33,10 @@ export const Left = styled.div`
   align-items: center;
 `;
 
-export const LogoStyled = styled(Logo)`
+export const LogoStyled = styled.img`
   margin-right: 98px;
-  width: 66px;
-  height: 66px;
+  width: 80px;
+  height: 72px;
 `;
 
 export const Right = styled.div`

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Advantage from "../Advantage/Advantage";
+import Field from "../Field/Field";
 
 export const RepairInfoStyled = styled.div`
   display: flex;
@@ -26,11 +27,8 @@ export const Forms = styled.form`
   width: 266px;
 `;
 
-// TODO временная заглушка
-export const Field = styled.div`
+export const FieldStyled = styled(Field)`
+  width: 100%;
   height: 40px;
-  border-radius: 2px;
-  border: solid 1px #c5cfde;
-  background-color: #ffffff;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 `;

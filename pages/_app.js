@@ -1,5 +1,5 @@
 import App from "next/app";
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import { Provider } from "mobx-react";
 import NoSSR from "react-no-ssr";
 import { store } from "../store/store";

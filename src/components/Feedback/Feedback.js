@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { inject } from "mobx-react";
 import useForm from "react-hook-form";
 
@@ -17,10 +17,12 @@ import {
 
 const Feedback = ({ openModalSuccess, send }) => {
   const { register, handleSubmit, errors } = useForm();
+  const maskEl = useRef();
 
   const onSubmit = (data, e) => {
-    e.target.reset();
     send(data);
+    e.target.reset();
+    maskEl.current.value = "";
     openModalSuccess();
   };
 
@@ -37,10 +39,12 @@ const Feedback = ({ openModalSuccess, send }) => {
         <Fields>
           <FieldStyled
             name="name"
-            ref={register({
-              validate: validateName,
-              required: true
-            })}
+            ref={{
+              ref: register({
+                validate: validateName,
+                required: true
+              })
+            }}
             placeholder="Как к вам обращаться?"
             error={errors.name && "Пожалуйста, введите русские символы"}
             size="full"
@@ -48,10 +52,13 @@ const Feedback = ({ openModalSuccess, send }) => {
           <FieldStyled
             name="phone"
             placeholder="Ваш номер"
-            ref={register({
-              validate: validatePhone,
-              required: true
-            })}
+            ref={{
+              ref: maskEl,
+              inputRef: register({
+                validate: validatePhone,
+                required: true
+              })
+            }}
             error={errors.phone && "Пожалуйста, введите правильные данные"}
             size="full"
           />
