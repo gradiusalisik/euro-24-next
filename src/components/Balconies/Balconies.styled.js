@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Button from "../Button/Button";
 import Advantage from "../Advantage/Advantage";
+import Slider from "react-slick";
 
 export const BalconiesStyled = styled.div`
   margin-bottom: 100px;
@@ -18,10 +19,15 @@ export const ButtonStyled = styled(Button)`
   width: 210px;
 `;
 
-export const Photo = styled.img`
+export const SliderImage = styled(Slider)`
   margin-right: 40px;
   width: 622px;
   height: 324px;
+`;
+
+export const Photo = styled.img`
+  width: 100%;
+  height: 100%;
 `;
 
 export const Info = styled.div`
