@@ -2,11 +2,11 @@ import styled, { css } from "styled-components";
 import Header from "./src/components/Header/Header";
 import Cupboard from "./src/components/Cupboard/Cupboard";
 
-const BgHeader = "./static/img/backgrounds/bg-header.svg";
-const BgGreeting = "./static/img/backgrounds/bg-greeting.svg";
-const BgOptions = "./static/img/backgrounds/bg-options.svg";
-const BgShells = "./static/img/backgrounds/bg-shells.svg";
-const BgPromo = "./static/img/backgrounds/bg-promo.svg";
+const BgHeader = "static/img/backgrounds/bg-header.svg";
+const BgGreeting = "static/img/backgrounds/bg-greeting.svg";
+const BgOptions = "static/img/backgrounds/bg-options.svg";
+const BgShells = "static/img/backgrounds/bg-shells.svg";
+const BgPromo = "static/img/backgrounds/bg-promo.svg";
 
 export const AppStyled = styled.div`
   position: relative;

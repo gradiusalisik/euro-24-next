@@ -21,7 +21,8 @@ import {
 const ModalReview = ({
   closeModalReview,
   isShowModalReview,
-  openModalReviewSuccess
+  openModalReviewSuccess,
+  send
 }) => {
   const [myFiles, setMyfiles] = useState([]);
   const [isErrorFiles, setErrorFiles] = useState(false);
@@ -39,6 +40,10 @@ const ModalReview = ({
     }
     e.target.reset();
     openModalReviewSuccess();
+    send({
+      ...data,
+      files: myFiles
+    });
     handleClose();
   };
 
@@ -59,7 +64,11 @@ const ModalReview = ({
           <Image />
           <Title>Оставить отзыв</Title>
         </Header>
-        <Form onSubmit={handleSubmit(onSubmit)}>
+        <Form
+          onSubmit={handleSubmit(onSubmit)}
+          enctype="multipart/form-data"
+          method="post"
+        >
           <FieldStyled
             name="name"
             type="text"
@@ -98,8 +107,9 @@ const ModalReview = ({
   );
 };
 
-export default inject(({ modalStore }) => ({
+export default inject(({ modalStore, formStore }) => ({
   closeModalReview: modalStore.closeModalReview,
   openModalReviewSuccess: modalStore.openModalReviewSuccess,
-  isShowModalReview: modalStore.isShowModalReview
+  isShowModalReview: modalStore.isShowModalReview,
+  send: formStore.send
 }))(ModalReview);

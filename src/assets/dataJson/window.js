@@ -1,20 +1,20 @@
 import React from "react";
 import { Cold } from "../../components/Icons/Cold";
-const ExampleImg = "/static/img/window/example.jpg";
-const BalconiesImg = "/static/img/window/balconies.jpg";
-const WindowImg = "/static/img/window/window.jpg";
-const Classic1 = "/static/img/radiobutton/classic/button/cs001.jpg";
-const Classic2 = "/static/img/radiobutton/classic/button/cs002.jpg";
-const Premier1 = "/static/img/radiobutton/premier/button/1.jpg";
-const Premier2 = "/static/img/radiobutton/premier/button/2.jpg";
-const Metallic1 = "/static/img/radiobutton/metallic/button/mt001.jpg";
-const Metallic2 = "/static/img/radiobutton/metallic/button/mt002.jpg";
-const ClassicBig1 = "/static/img/radiobutton/classic/frame/cs001.jpg";
-const ClassicBig2 = "/static/img/radiobutton/classic/frame/cs002.jpg";
-const PremierBig1 = "/static/img/radiobutton/premier/frame/1.jpg";
-const PremierBig2 = "/static/img/radiobutton/premier/frame/2.jpg";
-const MetallicBig1 = "/static/img/radiobutton/metallic/frame/mt001.jpg";
-const MetallicBig2 = "/static/img/radiobutton/metallic/frame/mt002.jpg";
+const ExampleImg = "static/img/window/example.jpg";
+const BalconiesImg = "static/img/window/balconies.jpg";
+const WindowImg = "static/img/window/window.jpg";
+const Classic1 = "static/img/radiobutton/classic/button/cs001.jpg";
+const Classic2 = "static/img/radiobutton/classic/button/cs002.jpg";
+const Premier1 = "static/img/radiobutton/premier/button/1.jpg";
+const Premier2 = "static/img/radiobutton/premier/button/2.jpg";
+const Metallic1 = "static/img/radiobutton/metallic/button/mt001.jpg";
+const Metallic2 = "static/img/radiobutton/metallic/button/mt002.jpg";
+const ClassicBig1 = "static/img/radiobutton/classic/frame/cs001.jpg";
+const ClassicBig2 = "static/img/radiobutton/classic/frame/cs002.jpg";
+const PremierBig1 = "static/img/radiobutton/premier/frame/1.jpg";
+const PremierBig2 = "static/img/radiobutton/premier/frame/2.jpg";
+const MetallicBig1 = "static/img/radiobutton/metallic/frame/mt001.jpg";
+const MetallicBig2 = "static/img/radiobutton/metallic/frame/mt002.jpg";
 
 export const tags = [
   {

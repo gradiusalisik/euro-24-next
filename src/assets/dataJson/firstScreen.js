@@ -1,12 +1,12 @@
-const ImageIcon = "/static/img/firstScreen/illustration-greeting.svg";
+const ImageIcon = "static/img/firstScreen/illustration-greeting.svg";
 
-const LogoKbe = "/static/img/brands/logo-kbe.svg";
-const LogoRehau = "/static/img/brands/logo-rehau.svg";
-const LogoSalamander = "/static/img/brands/logo-salamander.svg";
-const LogoSchuco = "/static/img/brands/logo-schuco.svg";
-const LogoTrocal = "/static/img/brands/logo-trocal.svg";
-const LogoVeka = "/static/img/brands/logo-veka.svg";
-const LogoMelke = "/static/img/brands/logo-melke.svg";
+const LogoKbe = "static/img/brands/logo-kbe.svg";
+const LogoRehau = "static/img/brands/logo-rehau.svg";
+const LogoSalamander = "static/img/brands/logo-salamander.svg";
+const LogoSchuco = "static/img/brands/logo-schuco.svg";
+const LogoTrocal = "static/img/brands/logo-trocal.svg";
+const LogoVeka = "static/img/brands/logo-veka.svg";
+const LogoMelke = "static/img/brands/logo-melke.svg";
 
 export const firstScreen = {
   title:

@@ -78,7 +78,7 @@ const FieldFiles = ({ name, error, handleParentFiles }) => {
     <FieldFilesStyled error={error}>
       <Container className="container">
         <Dropzone {...getRootProps()}>
-          <Input {...getInputProps()} />
+          <Input {...getInputProps()} name={name} />
           <Files>{renderShadowImage()}</Files>
         </Dropzone>
         {myFiles.length > 0 && (

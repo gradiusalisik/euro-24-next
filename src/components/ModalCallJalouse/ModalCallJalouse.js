@@ -14,29 +14,33 @@ import {
   Description,
   FieldStyled,
   ButtonSubmit
-} from "./ModalCall.styled";
+} from "../ModalCall/ModalCall.styled";
 
-const ModalCall = ({
-  closeModalCall,
-  isShowModalCall,
+const ModalCallJalouse = ({
+  closeModalCallJalouse,
+  isShowModalCallJalouse,
   openModalSuccess,
-  send
+  send,
+  titleJalouse
 }) => {
   const { register, handleSubmit, errors } = useForm();
 
   const onSubmit = (data, e) => {
     e.target.reset();
     openModalSuccess();
-    send(data);
+    send({
+      ...data,
+      titleJalouse
+    });
     handleClose();
   };
 
   const handleClose = () => {
-    closeModalCall();
+    closeModalCallJalouse();
   };
 
   return (
-    <Modal isShow={isShowModalCall} onClose={handleClose}>
+    <Modal isShow={isShowModalCallJalouse} onClose={handleClose}>
       <ModalCallStyled>
         <Image />
         <Form onSubmit={handleSubmit(onSubmit)}>
@@ -72,8 +76,9 @@ const ModalCall = ({
 };
 
 export default inject(({ modalStore, formStore }) => ({
-  closeModalCall: modalStore.closeModalCall,
+  closeModalCallJalouse: modalStore.closeModalCallJalouse,
   openModalSuccess: modalStore.openModalSuccess,
-  isShowModalCall: modalStore.isShowModalCall,
-  send: formStore.send
-}))(ModalCall);
+  isShowModalCallJalouse: modalStore.isShowModalCallJalouse,
+  send: formStore.send,
+  titleJalouse: formStore.titleJalouse
+}))(ModalCallJalouse);

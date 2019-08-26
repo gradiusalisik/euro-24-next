@@ -16,7 +16,7 @@ import {
   Wrap
 } from "./Cupboard.styled";
 
-const Cupboard = ({ className, openModalCall }) => {
+const Cupboard = ({ className, openModalCallCupboard, getTitleCupboard }) => {
   const [tabId, setTabId] = useState(tabs[0].id);
 
   const handleClick = id => {
@@ -27,8 +27,10 @@ const Cupboard = ({ className, openModalCall }) => {
 
   const background = cupboards[count].background;
   const alt = cupboards[count].id;
+
   const handleClickCall = () => {
-    openModalCall();
+    getTitleCupboard(cupboards[count].title);
+    openModalCallCupboard();
   };
 
   return (
@@ -47,6 +49,7 @@ const Cupboard = ({ className, openModalCall }) => {
   );
 };
 
-export default inject(({ modalStore }) => ({
-  openModalCall: modalStore.openModalCall
+export default inject(({ modalStore, formStore }) => ({
+  openModalCallCupboard: modalStore.openModalCallCupboard,
+  getTitleCupboard: formStore.getTitleCupboard
 }))(Cupboard);

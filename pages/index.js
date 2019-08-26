@@ -24,6 +24,11 @@ import ModalReviewSuccess from "../src/components/ModalReviewSuccess/ModalReview
 import ModalSuccess from "../src/components/ModalSuccess/ModalSuccess";
 import ModalWindowCalculator from "../src/components/ModalWindowCalculator/ModalWindowCalculator";
 import ModalCall from "../src/components/ModalCall/ModalCall";
+import ModalCallWindow from "../src/components/ModalCallWindow/ModalCallWindow";
+import ModalCallNets from "../src/components/ModalCallNets/ModalCallNets";
+import ModalCallJalouse from "../src/components/ModalCallJalouse/ModalCallJalouse";
+import ModalCallBalconies from "../src/components/ModalCallBalconies/ModalCallBalconies";
+import ModalCallCupboard from "../src/components/ModalCallCupboard/ModalCallCupboard";
 import FixedButton from "../src/components/FixedButton/FixedButton";
 import Promo from "../src/components/Promo/Promo";
 
@@ -105,6 +110,11 @@ const App = () => {
       <ModalSuccess />
       <ModalReviewSuccess />
       <ModalCall />
+      <ModalCallWindow />
+      <ModalCallNets />
+      <ModalCallJalouse />
+      <ModalCallBalconies />
+      <ModalCallCupboard />
       <ModalWindowCalculator />
     </AppStyled>
   );

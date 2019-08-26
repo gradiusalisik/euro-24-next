@@ -15,11 +15,12 @@ import {
   ButtonStyled
 } from "./Feedback.styled";
 
-const Feedback = ({ openModalSuccess }) => {
+const Feedback = ({ openModalSuccess, send }) => {
   const { register, handleSubmit, errors } = useForm();
 
   const onSubmit = (data, e) => {
     e.target.reset();
+    send(data);
     openModalSuccess();
   };
 
@@ -63,6 +64,7 @@ const Feedback = ({ openModalSuccess }) => {
   );
 };
 
-export default inject(({ modalStore }) => ({
+export default inject(({ modalStore, formStore }) => ({
+  send: formStore.send,
   openModalSuccess: modalStore.openModalSuccess
 }))(Feedback);

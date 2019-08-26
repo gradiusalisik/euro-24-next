@@ -25,12 +25,11 @@ const Field = React.forwardRef(
       size={size}
       className={className}
     >
-      {console.log(value, "value")}
       {name === "phone" ? (
         <InputMask
           onChange={onChange}
           placeholder={placeholder}
-          type={type}
+          type="tel"
           name={name}
           mask="+7 (999) 999-99-99"
           value={value}

@@ -6,14 +6,14 @@ import { Move } from "../../components/Icons/Move";
 import { MoveSecond } from "../../components/Icons/MoveSecond";
 import { Woods } from "../../components/Icons/Woods";
 
-const BalconiesImg = "/static/img/services/balconies.jpg";
-const WindowImg = "/static/img/services/window.jpg";
-const DecorImg = "/static/img/services/decor.jpg";
-const BlocksImg = "/static/img/services/blocks.jpg";
-const KladkaImg = "/static/img/services/kladka.jpg";
-const WoodsImg = "/static/img/services/woods.jpg";
-const MoveImg = "/static/img/services/move.jpg";
-const MoveSecondsImg = "/static/img/services/move-second.jpg";
+const BalconiesImg = "static/img/services/balconies.jpg";
+const WindowImg = "static/img/services/window.jpg";
+const DecorImg = "static/img/services/decor.jpg";
+const BlocksImg = "static/img/services/blocks.jpg";
+const KladkaImg = "static/img/services/kladka.jpg";
+const WoodsImg = "static/img/services/woods.jpg";
+const MoveImg = "static/img/services/move.jpg";
+const MoveSecondsImg = "static/img/services/move-second.jpg";
 
 export const tabs = [
   {

@@ -3,8 +3,6 @@ import { inject } from "mobx-react";
 import MainForm from "../MainForm/MainForm";
 import ModalDiscount from "../ModalDiscount/ModalDiscount";
 
-const PromoImage = "/static/img/promo/illustration-size.svg";
-
 import {
   PromoStyled,
   ImageWrap,
@@ -13,6 +11,8 @@ import {
   Content,
   CodeShadow
 } from "./Promo.styled";
+
+const PromoImage = "static/img/promo/illustration-size.svg";
 
 const Promo = ({ hideCodeDiscount, openModalDiscount }) => {
   const handleOpenDiscount = () => {

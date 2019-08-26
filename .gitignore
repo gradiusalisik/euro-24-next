@@ -18,7 +18,9 @@
 .env.test.local
 .env.production.local
 .next
+_next
 out
+form.php
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

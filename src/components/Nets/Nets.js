@@ -22,7 +22,7 @@ import {
   AdvantageStyled
 } from "./Nets.styled";
 
-const Nets = ({ openModalCall }) => {
+const Nets = ({ openModalCallNets, getTitleNets }) => {
   const defaultSlides = slides.filter(slide => slide.tags.includes(tags[0].id));
 
   const [tagIds, setTagId] = useState([tags[0].id]);
@@ -65,7 +65,8 @@ const Nets = ({ openModalCall }) => {
   };
 
   const handleClickCall = () => {
-    openModalCall();
+    getTitleNets(newSlides[count].title);
+    openModalCallNets();
   };
 
   const getSlideTags = slideTags =>
@@ -130,6 +131,7 @@ const Nets = ({ openModalCall }) => {
   );
 };
 
-export default inject(({ modalStore }) => ({
-  openModalCall: modalStore.openModalCall
+export default inject(({ modalStore, formStore }) => ({
+  openModalCallNets: modalStore.openModalCallNets,
+  getTitleNets: formStore.getTitleNets
 }))(Nets);

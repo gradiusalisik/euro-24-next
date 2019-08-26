@@ -15,7 +15,7 @@ import {
   Photo
 } from "./Jalousie.styled";
 
-const Jalousie = ({ openModalCall }) => {
+const Jalousie = ({ openModalCallJalouse, getTitleJalouse }) => {
   const [tabId, setTabId] = useState(tabs[0].id);
 
   const handleClick = id => {
@@ -26,8 +26,10 @@ const Jalousie = ({ openModalCall }) => {
 
   const background = jalousies[count].background;
   const alt = jalousies[count].id;
+
   const handleClickCall = () => {
-    openModalCall();
+    getTitleJalouse(jalousies[count].title);
+    openModalCallJalouse();
   };
 
   return (
@@ -45,5 +47,5 @@ const Jalousie = ({ openModalCall }) => {
 };
 
 export default inject(({ modalStore }) => ({
-  openModalCall: modalStore.openModalCall
+  openModalCallJalouse: modalStore.openModalCallJalouse
 }))(Jalousie);
