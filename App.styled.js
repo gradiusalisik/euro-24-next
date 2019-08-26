@@ -77,6 +77,7 @@ export const CupboardStyled = styled(Cupboard)`
     content: "";
     background-image: url(${BgShells});
     background-repeat: no-repeat;
+    background-size: 100%;
     background-position: 0 100%;
   }
 `;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { inject } from "mobx-react";
 import useForm from "react-hook-form";
 
@@ -24,14 +24,16 @@ const ModalCallBalconies = ({
   titleBalconies
 }) => {
   const { register, handleSubmit, errors } = useForm();
+  const maskEl = useRef();
 
   const onSubmit = (data, e) => {
-    e.target.reset();
     openModalSuccess();
     send({
       ...data,
       titleBalconies
     });
+    e.target.reset();
+    maskEl.current.value = "";
     handleClose();
   };
 
@@ -49,10 +51,12 @@ const ModalCallBalconies = ({
           <FieldStyled
             name="name"
             type="text"
-            ref={register({
-              validate: validateName,
-              required: true
-            })}
+            ref={{
+              ref: register({
+                validate: validateName,
+                required: true
+              })
+            }}
             placeholder="Как к вам обращаться?"
             error={errors.name && "Пожалуйста, введите русские символы"}
           />
@@ -60,10 +64,13 @@ const ModalCallBalconies = ({
             name="phone"
             type="text"
             placeholder="Ваш номер"
-            ref={register({
-              validate: validatePhone,
-              required: true
-            })}
+            ref={{
+              ref: maskEl,
+              inputRef: register({
+                validate: validatePhone,
+                required: true
+              })
+            }}
             error={errors.phone && "Пожалуйста, введите правильные данные"}
           />
           <ButtonSubmit type="submit" size="full">

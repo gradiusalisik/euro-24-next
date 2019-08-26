@@ -28,6 +28,12 @@ class FormStore {
   @observable
   loadState = false;
 
+  @observable
+  isDiscount = false;
+
+  @observable
+  myFiles = [];
+
   @action
   send = data => {
     const formData = new FormData();
@@ -42,6 +48,7 @@ class FormStore {
     formData.append("titleJalouse", data.titleJalouse);
     formData.append("titleBalconies", data.titleBalconies);
     formData.append("titleCupboard", data.titleCupboard);
+    formData.append("discount", this.isDiscount);
 
     if (data.files) {
       data.files.forEach(file => {
@@ -98,6 +105,28 @@ class FormStore {
   @action
   getColorWindow = color => {
     this.colorWindow = color;
+  };
+
+  @action
+  setDiscount = () => {
+    this.isDiscount = true;
+  };
+
+  @action
+  setMyFiles = files => {
+    this.myFiles = files;
+  };
+
+  @action
+  removeFile = file => {
+    const newFiles = [...this.myFiles];
+    newFiles.splice(newFiles.indexOf(file), 1);
+    this.setMyFiles(newFiles);
+  };
+
+  @action
+  resetFiles = () => {
+    this.myFiles = [];
   };
 }
 
