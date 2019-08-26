@@ -15,7 +15,8 @@ import {
   ButtonStyled,
   Advantages,
   AdvantageStyled,
-  Info
+  Info,
+  SliderImage
 } from "./Balconies.styled";
 
 const Balconies = ({ openModalCallBalconies, getTitleBalconies }) => {
@@ -27,13 +28,20 @@ const Balconies = ({ openModalCallBalconies, getTitleBalconies }) => {
 
   const count = balconies.findIndex(({ id }) => id === tabId);
 
-  const background = balconies[count].background;
+  const backgrounds = balconies[count].backgrounds;
   const advantages = balconies[count].advantages;
-  const alt = balconies[count].id;
 
   const handleClickCall = () => {
     getTitleBalconies(balconies[count].title);
     openModalCallBalconies();
+  };
+
+  const settings = {
+    slidesToShow: 1,
+    arrows: false,
+    autoplay: true,
+    infinite: true,
+    speed: 700
   };
 
   return (
@@ -42,7 +50,11 @@ const Balconies = ({ openModalCallBalconies, getTitleBalconies }) => {
       <Tabs id={tabId} onClick={handleClick} tabs={tabs} />
       <Content>
         <Info>
-          <Photo src={background} alt={alt} />
+          <SliderImage {...settings}>
+            {backgrounds.map(item => (
+              <Photo src={item.background} alt={item.id} key={item.id} />
+            ))}
+          </SliderImage>
           <Slides slides={balconies} count={count}>
             <ButtonStyled onClick={handleClickCall}>
               Заказать балкон
