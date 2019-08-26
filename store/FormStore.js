@@ -35,6 +35,14 @@ class FormStore {
     formData.append("phone", data.phone);
     formData.append("reviews", data.reviews);
     formData.append("video", data.video);
+    formData.append("titleWindow", data.titleWindow);
+    formData.append("colorWindow", data.colorWindow);
+    formData.append("titleNets", data.titleNets);
+    formData.append("valueNets", data.valueNets);
+    formData.append("titleJalouse", data.titleJalouse);
+    formData.append("titleBalconies", data.titleBalconies);
+    formData.append("titleCupboard", data.titleCupboard);
+
     if (data.files) {
       data.files.forEach(file => {
         formData.append("files", file, file.name);
