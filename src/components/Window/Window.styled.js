@@ -96,4 +96,6 @@ export const AdvantageStyled = styled(Advantage)`
   }
 `;
 
-export const WindowColorStyled = styled(WindowColor)``;
+export const WindowColorStyled = styled(WindowColor)`
+  margin-right: 56px;
+`;

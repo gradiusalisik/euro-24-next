@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { PropTypes as pt } from "prop-types";
 import { inject } from "mobx-react";
 
@@ -40,6 +40,24 @@ const WindowColor = ({
   openModalCallWindow,
   openModalWindowCalculator
 }) => {
+  const [itemHeight, setItemHeight] = useState(0);
+  const itemEl = useRef();
+  const count = currentSlide !== undefined ? currentSlide : 0;
+
+  useEffect(() => {
+    if (itemEl.current) {
+      const height = itemEl.current.getBoundingClientRect().height;
+      setItemHeight(height);
+    }
+  }, [count]);
+
+  useEffect(() => {
+    if (itemEl.current) {
+      const height = itemEl.current.getBoundingClientRect().height;
+      setItemHeight(height);
+    }
+  }, []);
+
   const handleChangeColor = e => {
     const categoryValue = e.target.value;
     onChangeColor(categoryValue);
@@ -61,8 +79,6 @@ const WindowColor = ({
   // };
 
   const slideCount = listColors.length - 1;
-
-  const count = currentSlide !== undefined ? currentSlide : 0;
 
   return (
     <WindowColorStyled className={className}>
@@ -88,9 +104,18 @@ const WindowColor = ({
             )}
             <Category>{listColors[currentSlide].textCategory}</Category>
           </Head>
-          <Slides>
+          <Slides
+            style={{
+              height: itemHeight
+            }}
+          >
             {listColors.map((item, key) => (
-              <Item count={count} key={item.category} number={key}>
+              <Item
+                count={count}
+                key={item.category}
+                number={key}
+                ref={key === count ? itemEl : null}
+              >
                 {item.colors.map(color => (
                   <Radiobutton
                     key={color.value}
