@@ -42,6 +42,7 @@ const FieldFiles = ({
   });
 
   const handleRemoveFile = file => () => {
+    console.log(file, "file");
     removeFile(file);
   };
 
@@ -96,5 +97,5 @@ const FieldFiles = ({
 export default inject(({ formStore }) => ({
   myFiles: formStore.myFiles,
   setMyFiles: formStore.setMyFiles,
-  removieFile: formStore.removieFile
+  removeFile: formStore.removeFile
 }))(FieldFiles);
