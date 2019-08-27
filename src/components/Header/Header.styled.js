@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { colors, font } from "../../variables";
+import { Link as LinkScroll } from "react-scroll";
 
 export const HeaderStyled = styled.header`
   padding: 32px 56px;
@@ -26,6 +27,10 @@ export const HeaderStyled = styled.header`
         height: 54px;
       }
     `}
+`;
+
+export const Link = styled(LinkScroll)`
+  cursor: pointer;
 `;
 
 export const Left = styled.div`

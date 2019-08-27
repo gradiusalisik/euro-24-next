@@ -99,6 +99,7 @@ const Nets = ({ openModalCallNets, getTitleNets }) => {
               onClickNext={handleClickNext}
               getSlideTags={getSlideTags}
               isArrows
+              maxWidth={380}
             >
               <Buttons>
                 <Button size="full" onClick={handleClickCall}>

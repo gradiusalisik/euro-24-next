@@ -65,48 +65,50 @@ const App = () => {
 
   return (
     <AppStyled>
-      <Container>
-        <div ref={headerEl}>
-          <Header />
-        </div>
+      <Element name="home">
+        <Container>
+          <div ref={headerEl}>
+            <Header />
+          </div>
 
-        <HeaderScroll isScroll isShowHeader={isShowHeader} />
-        <FirstScreen />
-        <Element name="window">
-          <Window />
-          <Promo />
-          <ContentWindow>
-            <Jalousie />
-            <Nets />
-          </ContentWindow>
-        </Element>
-        <Element name="repair">
-          <Repair />
-        </Element>
-        <Element name="balconies">
-          <Balconies />
-          <CupboardStyled />
-        </Element>
-        <Content>
-          <ContentWrap>
-            <Element name="services">
-              <Services />
-            </Element>
-            <Element name="stocks">
-              <Stocks />
-            </Element>
-            <Element name="portfolio">
-              <Portfolio />
-            </Element>
-          </ContentWrap>
-        </Content>
-        <Element name="reviews">
-          <Reviews />
-        </Element>
-        <Feedback />
-        <Footer />
-        <FixedButton />
-      </Container>
+          <HeaderScroll isScroll isShowHeader={isShowHeader} />
+          <FirstScreen />
+          <Element name="window">
+            <Window />
+            <Promo />
+            <ContentWindow>
+              <Jalousie />
+              <Nets />
+            </ContentWindow>
+          </Element>
+          <Element name="repair">
+            <Repair />
+          </Element>
+          <Element name="balconies">
+            <Balconies />
+            <CupboardStyled />
+          </Element>
+          <Content>
+            <ContentWrap>
+              <Element name="services">
+                <Services />
+              </Element>
+              <Element name="stocks">
+                <Stocks />
+              </Element>
+              <Element name="portfolio">
+                <Portfolio />
+              </Element>
+            </ContentWrap>
+          </Content>
+          <Element name="reviews">
+            <Reviews />
+          </Element>
+          <Feedback />
+          <Footer />
+          <FixedButton />
+        </Container>
+      </Element>
       <ModalSuccess />
       <ModalReviewSuccess />
       <ModalCall />

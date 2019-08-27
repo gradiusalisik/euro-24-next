@@ -14,7 +14,8 @@ import {
   Right,
   Contacts,
   Mail,
-  Phone
+  Phone,
+  Link
 } from "./Header.styled";
 
 const Header = ({ isScroll, className, openModalCall }) => {
@@ -25,7 +26,9 @@ const Header = ({ isScroll, className, openModalCall }) => {
   return (
     <HeaderStyled isScroll={isScroll} className={className}>
       <Left>
-        <LogoStyled src="static/img/header/logo.png" alt="logo" />
+        <Link to="home" spy={true} smooth={true} duration={500} offset={-185}>
+          <LogoStyled src="static/img/header/logo.png" alt="logo" />
+        </Link>
         <Menu menu={menu} />
       </Left>
 

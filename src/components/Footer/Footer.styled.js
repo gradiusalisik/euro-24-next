@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { colors } from "../../variables";
 import { LogoFooter } from "../Icons/LogoFooter";
+import { Link as LinkScroll } from "react-scroll";
 
 export const FooterStyled = styled.footer`
   background-color: ${colors.dark};
@@ -18,7 +19,10 @@ export const Left = styled.div`
   align-items: center;
 `;
 
-export const Right = styled.div`
+export const Right = styled.div``;
+
+export const Link = styled(LinkScroll)`
+  cursor: pointer;
 `;
 
 export const CopyrightStyled = styled.div`
