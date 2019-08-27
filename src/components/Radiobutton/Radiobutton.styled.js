@@ -8,6 +8,7 @@ export const Label = styled.label`
   justify-content: center;
   width: 44px;
   height: 44px;
+  cursor: pointer;
 `;
 
 export const Color = styled.div`

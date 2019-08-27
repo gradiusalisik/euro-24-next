@@ -5,14 +5,10 @@ const BalconiesImg = "static/img/window/balconies.jpg";
 const WindowImg = "static/img/window/window.jpg";
 const Classic1 = "static/img/radiobutton/classic/button/cs001.jpg";
 const Classic2 = "static/img/radiobutton/classic/button/cs002.jpg";
-const Premier1 = "static/img/radiobutton/premier/button/1.jpg";
-const Premier2 = "static/img/radiobutton/premier/button/2.jpg";
 const Metallic1 = "static/img/radiobutton/metallic/button/mt001.jpg";
 const Metallic2 = "static/img/radiobutton/metallic/button/mt002.jpg";
 const ClassicBig1 = "static/img/radiobutton/classic/frame/cs001.jpg";
 const ClassicBig2 = "static/img/radiobutton/classic/frame/cs002.jpg";
-const PremierBig1 = "static/img/radiobutton/premier/frame/1.jpg";
-const PremierBig2 = "static/img/radiobutton/premier/frame/2.jpg";
 const MetallicBig1 = "static/img/radiobutton/metallic/frame/mt001.jpg";
 const MetallicBig2 = "static/img/radiobutton/metallic/frame/mt002.jpg";
 
@@ -206,14 +202,128 @@ export const colors = {
         {
           value: "Ирландский дуб",
           name: "premier",
-          background: Premier1,
-          backgroundBig: PremierBig1
+          background: "static/img/radiobutton/premier/button/1.jpg",
+          backgroundBig: "static/img/radiobutton/premier/frame/1.jpg"
         },
         {
           value: "Античный дуб",
           name: "premier",
-          background: Premier2,
-          backgroundBig: PremierBig2
+          background: "static/img/radiobutton/premier/button/2.jpg",
+          backgroundBig: "static/img/radiobutton/premier/frame/2.jpg"
+        },
+        {
+          value: "Рустикальная вишня",
+          name: "premier",
+          background: "static/img/radiobutton/premier/button/3.jpg",
+          backgroundBig: "static/img/radiobutton/premier/frame/3.jpg"
+        },
+        {
+          value: "Цветущая вишня",
+          name: "premier",
+          background: "static/img/radiobutton/premier/button/4.jpg",
+          backgroundBig: "static/img/radiobutton/premier/frame/4.jpg"
+        },
+        {
+          value: "Нежная вишня",
+          name: "premier",
+          background: "static/img/radiobutton/premier/button/5.jpg",
+          backgroundBig: "static/img/radiobutton/premier/frame/5.jpg"
+        },
+        {
+          value: "Табаско тик",
+          name: "premier",
+          background: "static/img/radiobutton/premier/button/6.jpg",
+          backgroundBig: "static/img/radiobutton/premier/frame/6.jpg"
+        },
+        {
+          value: "Горная лиственница красная",
+          name: "premier",
+          background: "static/img/radiobutton/premier/button/7.jpg",
+          backgroundBig: "static/img/radiobutton/premier/frame/7.jpg"
+        },
+        {
+          value: "Антик",
+          name: "premier",
+          background: "static/img/radiobutton/premier/button/8.jpg",
+          backgroundBig: "static/img/radiobutton/premier/frame/8.jpg"
+        },
+        {
+          value: "Рустик",
+          name: "premier",
+          background: "static/img/radiobutton/premier/button/9.jpg",
+          backgroundBig: "static/img/radiobutton/premier/frame/9.jpg"
+        },
+        {
+          value: "Винчестер XA",
+          name: "premier",
+          background: "static/img/radiobutton/premier/button/10.jpg",
+          backgroundBig: "static/img/radiobutton/premier/frame/10.jpg"
+        },
+        {
+          value: "Винчестер XC",
+          name: "premier",
+          background: "static/img/radiobutton/premier/button/11.jpg",
+          backgroundBig: "static/img/radiobutton/premier/frame/11.jpg"
+        },
+        {
+          value: "Терезина XC",
+          name: "premier",
+          background: "static/img/radiobutton/premier/button/12.jpg",
+          backgroundBig: "static/img/radiobutton/premier/frame/12.jpg"
+        },
+        {
+          value: "Сиена ПЛ",
+          name: "premier",
+          background: "static/img/radiobutton/premier/button/13.jpg",
+          backgroundBig: "static/img/radiobutton/premier/frame/13.jpg"
+        },
+        {
+          value: "Сиена ПР",
+          name: "premier",
+          background: "static/img/radiobutton/premier/button/14.jpg",
+          backgroundBig: "static/img/radiobutton/premier/frame/14.jpg"
+        },
+        {
+          value: "Сиена ПН",
+          name: "premier",
+          background: "static/img/radiobutton/premier/button/15.jpg",
+          backgroundBig: "static/img/radiobutton/premier/frame/15.jpg"
+        },
+        {
+          value: "Висконсин XД",
+          name: "premier",
+          background: "static/img/radiobutton/premier/button/16.jpg",
+          backgroundBig: "static/img/radiobutton/premier/frame/16.jpg"
+        },
+        {
+          value: "Туманный серый",
+          name: "premier",
+          background: "static/img/radiobutton/premier/button/17.jpg",
+          backgroundBig: "static/img/radiobutton/premier/frame/17.jpg"
+        },
+        {
+          value: "Синевато-серый финессе",
+          name: "premier",
+          background: "static/img/radiobutton/premier/button/18.jpg",
+          backgroundBig: "static/img/radiobutton/premier/frame/18.jpg"
+        },
+        {
+          value: "Серая буря финессе",
+          name: "premier",
+          background: "static/img/radiobutton/premier/button/19.jpg",
+          backgroundBig: "static/img/radiobutton/premier/frame/19.jpg"
+        },
+        {
+          value: "Красное вино",
+          name: "premier",
+          background: "static/img/radiobutton/premier/button/20.jpg",
+          backgroundBig: "static/img/radiobutton/premier/frame/20.jpg"
+        },
+        {
+          value: "Зеленая ель финессе",
+          name: "premier",
+          background: "static/img/radiobutton/premier/button/21.jpg",
+          backgroundBig: "static/img/radiobutton/premier/frame/21.jpg"
         }
       ]
     },
