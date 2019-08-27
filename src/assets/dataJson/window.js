@@ -5,12 +5,8 @@ const BalconiesImg = "static/img/window/balconies.jpg";
 const WindowImg = "static/img/window/window.jpg";
 const Classic1 = "static/img/radiobutton/classic/button/cs001.jpg";
 const Classic2 = "static/img/radiobutton/classic/button/cs002.jpg";
-const Metallic1 = "static/img/radiobutton/metallic/button/mt001.jpg";
-const Metallic2 = "static/img/radiobutton/metallic/button/mt002.jpg";
 const ClassicBig1 = "static/img/radiobutton/classic/frame/cs001.jpg";
 const ClassicBig2 = "static/img/radiobutton/classic/frame/cs002.jpg";
-const MetallicBig1 = "static/img/radiobutton/metallic/frame/mt001.jpg";
-const MetallicBig2 = "static/img/radiobutton/metallic/frame/mt002.jpg";
 
 export const tags = [
   {
@@ -352,14 +348,44 @@ export const colors = {
         {
           value: "Серебряная платина",
           name: "metallic",
-          background: Metallic1,
-          backgroundBig: MetallicBig1
+          background: "static/img/radiobutton/metallic/button/mt001.jpg",
+          backgroundBig: "static/img/radiobutton/metallic/frame/mt001.jpg"
         },
         {
           value: "Драгоценная платина",
           name: "metallic",
-          background: Metallic2,
-          backgroundBig: MetallicBig2
+          background: "static/img/radiobutton/metallic/button/mt002.jpg",
+          backgroundBig: "static/img/radiobutton/metallic/frame/mt002.jpg"
+        },
+        {
+          value: "Кварцевая платина",
+          name: "metallic",
+          background: "static/img/radiobutton/metallic/button/mt003.jpg",
+          backgroundBig: "static/img/radiobutton/metallic/frame/mt003.jpg"
+        },
+        {
+          value: "Королевская платина",
+          name: "metallic",
+          background: "static/img/radiobutton/metallic/button/mt004.jpg",
+          backgroundBig: "static/img/radiobutton/metallic/frame/mt004.jpg"
+        },
+        {
+          value: "Императорская платина",
+          name: "metallic",
+          background: "static/img/radiobutton/metallic/button/mt005.jpg",
+          backgroundBig: "static/img/radiobutton/metallic/frame/mt005.jpg"
+        },
+        {
+          value: "Графская платина",
+          name: "metallic",
+          background: "static/img/radiobutton/metallic/button/mt006.jpg",
+          backgroundBig: "static/img/radiobutton/metallic/frame/mt006.jpg"
+        },
+        {
+          value: "Кардинальская платина",
+          name: "metallic",
+          background: "static/img/radiobutton/metallic/button/mt007.jpg",
+          backgroundBig: "static/img/radiobutton/metallic/frame/mt007.jpg"
         }
       ]
     }
