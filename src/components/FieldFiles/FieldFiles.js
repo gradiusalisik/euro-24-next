@@ -42,7 +42,6 @@ const FieldFiles = ({
   });
 
   const handleRemoveFile = file => () => {
-    console.log(file, "file");
     removeFile(file);
   };
 
