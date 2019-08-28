@@ -26,41 +26,45 @@ export const balconies = [
     backgrounds: [
       {
         id: "cold1",
-        background: "static/img/balconies/example.jpg"
+        background: "static/img/balconies/holod1.jpg"
       },
       {
         id: "cold2",
-        background: "static/img/balconies/example.jpg"
+        background: "static/img/balconies/holod2.jpg"
       },
       {
         id: "cold3",
-        background: "static/img/balconies/example.jpg"
+        background: "static/img/balconies/holod3.jpg"
       }
     ],
-    title: "Al Provedal",
+    title: "Provedal",
     description:
-      "Trocal Balance&nbsp;&mdash; это воплощение новых идей для стильного и&nbsp;качественного решения в&nbsp;частном строительстве и&nbsp;ремонте. <br /><br />Традиционно выделяясь высоким качеством, окна из&nbsp;профиля Trocal Balance имеют элегантный внешний вид и&nbsp;отвечают эстетическим вкусам даже самых притязательных потребителей.",
-    price: "14000",
+      "Холодное остекление подразумевает установку алюминиевого профиля и одинарного стекла.  Резиновый уплотнитель обеспечивает герметичность конструкции. Оконные системы из алюминия надежно защищают балкон от дождя, ветра, уличной пыли и других агрессивных воздействий окружающей среды. Единственное, в чем холодное остекление лоджии уступает теплому — это температура, зимой на балконе будет всего на 5-7º C теплее, чем на улице.",
+    price: "3820",
     advantages: [
       {
         id: "1",
         icon: <Cold />,
-        title: "Энергосбережение"
+        title:
+          "Легкость конструкции, позволяющая выполнять монтаж даже на старых ослабленных балконах."
       },
       {
         id: "2",
         icon: <Cold />,
-        title: "Шумоизоляция"
+        title:
+          "Нетребовательность к уходу — профиль не нужно ни красить, ни покрывать лаком"
       },
       {
         id: "3",
         icon: <Cold />,
-        title: "Экологичный профиль"
+        title:
+          "Доступная стоимость — холодное остекление обходится заметно дешевле ПВХ-окон"
       },
       {
         id: "4",
         icon: <Cold />,
-        title: "Фурнитура класса А+"
+        title:
+          "Превосходный внешний вид, который сохраняется на протяжении всего срока службы"
       }
     ]
   },
@@ -69,41 +73,42 @@ export const balconies = [
     backgrounds: [
       {
         id: "little-warm1",
-        background: "static/img/balconies/example.jpg"
+        background: "static/img/balconies/poluteploe1.jpg"
       },
       {
         id: "little-warm2",
-        background: "static/img/balconies/example.jpg"
+        background: "static/img/balconies/poluteploe2.jpg"
       },
       {
         id: "little-warm3",
-        background: "static/img/balconies/example.jpg"
+        background: "static/img/balconies/poluteploe3.jpg"
       }
     ],
-    title: "Al Provedal",
+    title: "Slidors",
     description:
-      "Trocal Balance&nbsp;&mdash; это воплощение новых идей для стильного и&nbsp;качественного решения в&nbsp;частном строительстве и&nbsp;ремонте. <br /><br />Традиционно выделяясь высоким качеством, окна из&nbsp;профиля Trocal Balance имеют элегантный внешний вид и&nbsp;отвечают эстетическим вкусам даже самых притязательных потребителей.",
-    price: "14000",
+      "Полутеплое остекление – это компромиссное решение между теплым и холодным вариантом остекления балкона. В этом случае потребитель получает надежную защиту балкона от атмосферных осадков и пыли, а также положительную температуру воздуха внутри балкона даже в зимний период года. Подобное решение является оптимальным при обустройстве на балконе тренажерного зала, оранжереи или отсутствия технической возможности для монтажа массивных тяжелых ПВХ рам",
+    price: "5890",
     advantages: [
       {
         id: "1",
         icon: <Cold />,
-        title: "Энергосбережение"
+        title: "Легкость конструкции"
       },
       {
         id: "2",
         icon: <Cold />,
-        title: "Шумоизоляция"
+        title:
+          "Не запотевает поверхность–два стекла с осушителем обеспечивают отсутствие влаги на стекле"
       },
       {
         id: "3",
         icon: <Cold />,
-        title: "Экологичный профиль"
+        title: "Устойчивая защита от взлома"
       },
       {
         id: "4",
         icon: <Cold />,
-        title: "Фурнитура класса А+"
+        title: "Бюджетная цена– намного ниже, чем у теплого остекления"
       }
     ]
   },
@@ -112,21 +117,21 @@ export const balconies = [
     backgrounds: [
       {
         id: "warm1",
-        background: "static/img/balconies/example.jpg"
+        background: "static/img/balconies/teplo1.jpg"
       },
       {
         id: "warm2",
-        background: "static/img/balconies/example.jpg"
+        background: "static/img/balconies/teplo2.jpg"
       },
       {
         id: "warm3",
-        background: "static/img/balconies/example.jpg"
+        background: "static/img/balconies/teplo3.jpg"
       }
     ],
-    title: "Al Provedal",
+    title: "Rehau",
     description:
-      "Trocal Balance&nbsp;&mdash; это воплощение новых идей для стильного и&nbsp;качественного решения в&nbsp;частном строительстве и&nbsp;ремонте. <br /><br />Традиционно выделяясь высоким качеством, окна из&nbsp;профиля Trocal Balance имеют элегантный внешний вид и&nbsp;отвечают эстетическим вкусам даже самых притязательных потребителей.",
-    price: "14000",
+      "Теплое остекление несколько отличается от полутеплого. Эта вариация монтажа превосходно подойдет в том случае, если Вы планируете объединить балкон или лоджию с комнатой. За счет такого объединения пространства заметно увеличивается площадь комнаты, а надежная конструкция стеклопакета сохранит тепло в помещении.",
+    price: "6207",
     advantages: [
       {
         id: "1",
@@ -146,7 +151,7 @@ export const balconies = [
       {
         id: "4",
         icon: <Cold />,
-        title: "Фурнитура класса А+"
+        title: "Длительность использования"
       }
     ]
   },
@@ -155,41 +160,43 @@ export const balconies = [
     backgrounds: [
       {
         id: "french1",
-        background: "static/img/balconies/example.jpg"
+        background: "static/img/balconies/french1.jpg"
       },
       {
         id: "french2",
-        background: "static/img/balconies/example.jpg"
+        background: "static/img/balconies/french2.jpg"
       },
       {
         id: "french3",
-        background: "static/img/balconies/example.jpg"
+        background: "static/img/balconies/french3.jpg"
       }
     ],
-    title: "Al Provedal",
+    title: "Trocal",
     description:
-      "Trocal Balance&nbsp;&mdash; это воплощение новых идей для стильного и&nbsp;качественного решения в&nbsp;частном строительстве и&nbsp;ремонте. <br /><br />Традиционно выделяясь высоким качеством, окна из&nbsp;профиля Trocal Balance имеют элегантный внешний вид и&nbsp;отвечают эстетическим вкусам даже самых притязательных потребителей.",
-    price: "14000",
+      "Французское остекление  на сегодняшний день стало очень популярным. Французский балкон отличается от обычного балкона тем, что такой балкон состоит практически полностью из окон. Такой тип балкона выглядит очень изящно, привлекательно, а за счет того, что он состоит полностью из окон, любая хозяйка может разместить на нем свои цветы, что в свою очередь украсит балкон, а металлические кованые изделия, которые можно приварить на внешней части балкона – сделают его оригинальным и неповторимым.",
+    price: "9657",
     advantages: [
       {
         id: "1",
         icon: <Cold />,
-        title: "Энергосбережение"
+        title:
+          "Визуально очень увеличивает пространство как балкона, так и комнаты"
       },
       {
         id: "2",
         icon: <Cold />,
-        title: "Шумоизоляция"
+        title: "Делает комнату светлее"
       },
       {
         id: "3",
         icon: <Cold />,
-        title: "Экологичный профиль"
+        title: "Экономия средств на отделке балкона"
       },
       {
         id: "4",
         icon: <Cold />,
-        title: "Фурнитура класса А+"
+        title:
+          "Красивый и изящный внешний вид, лаконично сочетается с фасадом зданий"
       }
     ]
   }

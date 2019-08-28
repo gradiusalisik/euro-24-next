@@ -34,20 +34,20 @@ export const tags = [
 export const slides = [
   {
     id: "1",
-    video: Video1,
-    poster: Poster,
+    // video: Video1,
+    image: Poster,
     tags: ["window"]
   },
   {
     id: "2",
-    video: Video1,
-    poster: Poster,
+    // video: Video1,
+    image: Poster,
     tags: ["window"]
   },
   {
     id: "3",
-    video: Video2,
-    poster: Poster,
+    // video: Video2,
+    image: Poster,
     tags: ["window"]
   },
   {

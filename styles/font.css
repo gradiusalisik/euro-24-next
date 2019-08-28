@@ -2,44 +2,39 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../src/assets/fonts/woff2/opensans-regular.woff2") format("woff2"),
-    url("../src/assets/fonts/woff/opensans-regular.woff") format("woff"),
-    url("../src/assets/fonts/ttf/opensans-regular.ttf") format("truetype");
+  src: url("/static/fonts/woff2/opensans-regular.woff2") format("woff2"),
+    url("/static/fonts/woff/opensans-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("../src/assets/fonts/woff2/roboto-regular.woff2") format("woff2"),
-    url("../src/assets/fonts/woff/roboto-regular.woff") format("woff"),
-    url("../src/assets/fonts/ttf/roboto-regular.ttf") format("truetype");
+  src: url("/static/fonts/woff2/roboto-regular.woff2") format("woff2"),
+    url("/static/fonts/woff/roboto-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("../src/assets/fonts/woff2/roboto-medium.woff2") format("woff2"),
-    url("../src/assets/fonts/woff/roboto-medium.woff") format("woff"),
-    url("../src/assets/fonts/ttf/roboto-medium.ttf") format("truetype");
+  src: url("/static/fonts/woff2/roboto-medium.woff2") format("woff2"),
+    url("/static/fonts/woff/roboto-medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("../src/assets/fonts/woff2/roboto-bold.woff2") format("woff2"),
-    url("../src/assets/fonts/woff/roboto-bold.woff") format("woff"),
-    url("../src/assets/fonts/ttf/roboto-bold.ttf") format("truetype");
+  src: url("/static/fonts/woff2/roboto-bold.woff2") format("woff2"),
+    url("/static/fonts/woff/roboto-bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("../src/assets/fonts/woff2/roboto-black.woff2") format("woff2"),
-    url("../src/assets/fonts/woff/roboto-black.woff") format("woff"),
-    url("../src/assets/fonts/ttf/roboto-regular.ttf") format("truetype");
+  src: url("/static/fonts/woff2/roboto-black.woff2") format("woff2"),
+    url("/static/fonts/woff/roboto-black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
 }

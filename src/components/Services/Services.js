@@ -6,7 +6,8 @@ import {
   tabs,
   servicesWindow,
   images,
-  servicesBalconies
+  servicesBalconies,
+  servicesRepair
 } from "../../assets/dataJson/services";
 
 import CardServicesInside from "../CardServicesInside/CardServicesInside";
@@ -109,6 +110,13 @@ const Services = ({ openModalCall }) => {
               isActive={tabId === "balconies"}
               services={servicesBalconies}
               onClick={handleClickCard(servicesBalconies)}
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleResetServiceId}
+            />
+            <CardsServicesContentStyled
+              isActive={tabId === "repair"}
+              services={servicesRepair}
+              onClick={handleClickCard(servicesRepair)}
               onMouseOver={handleMouseOver}
               onMouseOut={handleResetServiceId}
             />

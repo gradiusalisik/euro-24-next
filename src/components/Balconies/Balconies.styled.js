@@ -22,7 +22,13 @@ export const ButtonStyled = styled(Button)`
 export const SliderImage = styled(Slider)`
   margin-right: 40px;
   width: 622px;
-  height: 324px;
+  height: 354px;
+
+  .slick-list,
+  .slick-track,
+  .slick-slide div {
+    height: 100%;
+  }
 `;
 
 export const Photo = styled.img`

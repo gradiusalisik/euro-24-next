@@ -23,6 +23,10 @@ export const tabs = [
   {
     id: "balconies",
     text: "Балконы"
+  },
+  {
+    id: "repair",
+    text: "Ремонт"
   }
 ];
 
@@ -152,8 +156,61 @@ export const servicesBalconies = [
   }
 ];
 
+export const servicesRepair = [
+  {
+    id: "decor",
+    icon: <Decor />,
+    title: "Отделка балкона Я ремонт",
+    description:
+      "Стеклопакет толщиной 40 мм. Ваши окна будут бережно хранить тепло.",
+    price: "500",
+    info: []
+  },
+  {
+    id: "blocks",
+    icon: <Blocks />,
+    title: "Французкое остекление",
+    description: "Обеспечивает качественную теплоизоляцию высокого уровня.",
+    price: "2600",
+    info: []
+  },
+  {
+    id: "kladka",
+    icon: <Kladka />,
+    title: "Кладка на балкон",
+    description: "Контур уплотнения. Продлевает срок жизни окон до 50 лет.",
+    price: "2100",
+    info: []
+  },
+  {
+    id: "woods",
+    icon: <Woods />,
+    title: "Крыша на балкон",
+    description: "Обеспечивает качественную теплоизоляцию высокго уровня",
+    price: "4950",
+    info: []
+  },
+  {
+    id: "move",
+    icon: <Move />,
+    title: "Вынос балкона",
+    description: "Контур уплотнения. Продлевает срок жизни оконо до 50 лет.",
+    price: "1000",
+    info: []
+  },
+  {
+    id: "move-second",
+    icon: <MoveSecond />,
+    title: "Присоединение балкона",
+    description: "Контур уплотнения. Продлевает срок жизни оконо до 50 лет.",
+    price: "15000",
+    info: []
+  }
+];
+
 export const images = {
   balconies: BalconiesImg,
+  repair: BalconiesImg,
   window: WindowImg,
   decor: DecorImg,
   blocks: BlocksImg,
