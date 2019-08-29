@@ -63,13 +63,13 @@ const sizeSliderButton = {
   small: css`
     ${SliderPrevStyled} {
       margin-right: 8px;
-      width: 16px;
-      height: 16px;
+      width: 24px;
+      height: 24px;
     }
 
     ${SliderNextStyled} {
-      width: 16px;
-      height: 16px;
+      width: 24px;
+      height: 24px;
     }
   `
 };
