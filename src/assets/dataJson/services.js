@@ -37,7 +37,6 @@ export const servicesWindow = [
     title: "Отделка балкона",
     description:
       "Стеклопакет толщиной 40 мм. Ваши окна будут бережно хранить тепло.",
-    price: "500",
     info: [
       {
         id: "1",

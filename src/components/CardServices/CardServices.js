@@ -6,6 +6,7 @@ import {
   Icon,
   Info,
   Title,
+  Text,
   Description
 } from "./CardServices.styled";
 
@@ -29,7 +30,7 @@ const CardServices = ({
     <Info>
       <Title>{title}</Title>
       <Description>{description}</Description>
-      <Price price={price} />
+      {price ? <Price price={price} /> : <Text>Бесплатно</Text>}
     </Info>
   </CardServicesStyled>
 );
