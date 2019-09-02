@@ -33,7 +33,7 @@ const Window = ({
 }) => {
   const defaultSlides = slides.filter(slide => slide.tags.includes(tags[0].id));
 
-  const defaultValue = colors.list[0].colors[0].value;
+  const defaultValue = colors[0].colors[0].value;
 
   const [tagIds, setTagId] = useState([tags[0].id]);
   const [newSlides, setNewSlides] = useState(defaultSlides);
@@ -42,7 +42,7 @@ const Window = ({
   const [count, setCount] = useState(0);
   const [currentSlideColor, setCurrentSlideColor] = useState(0);
   const [checkedValue, setCheckedValue] = useState(defaultValue);
-  const defaultCurrentColorData = colors.list[0].colors[0];
+  const defaultCurrentColorData = colors[0].colors[0];
   const [currentColorData, setCurrentColorData] = useState(
     defaultCurrentColorData
   );
@@ -66,11 +66,11 @@ const Window = ({
   }, [count, getTitleWindow, newSlides]);
 
   useEffect(() => {
-    setCheckedValue(colors.list[currentSlideColor].colors[0].value);
+    setCheckedValue(colors[currentSlideColor].colors[0].value);
   }, [currentSlideColor]);
 
   useEffect(() => {
-    const currentFind = colors.list[currentSlideColor].colors.find(
+    const currentFind = colors[currentSlideColor].colors.find(
       element => element.value === checkedValue
     );
     const currentData = currentFind || defaultValue;
@@ -131,8 +131,8 @@ const Window = ({
           <WindowColorStyled
             title={newSlides[count].title}
             currentSlide={currentSlideColor}
-            listColors={colors.list}
-            price={colors.price}
+            listColors={colors}
+            price={newSlides[count].price}
             onClick={closeChooseColor}
             checkedValue={checkedValue}
             onClickNext={handleClickNextColor}

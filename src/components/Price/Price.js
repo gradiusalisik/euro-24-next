@@ -8,7 +8,7 @@ const Price = ({ price, className }) => (
   <PriceStyled className={className}>
     <Text>Цена от</Text>
     <Value>{numberWithSpaces(price)}</Value>
-    <Text>руб/м2</Text>
+    <Text>руб</Text>
   </PriceStyled>
 );
 

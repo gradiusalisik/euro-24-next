@@ -30,13 +30,14 @@ export const Content = styled.div`
 export const Visual = styled.div`
   position: relative;
   margin-right: 40px;
+  height: 454px;
 `;
 
 export const Photo = styled.div`
   width: 270px;
-  height: 454px;
+  height: 100%;
   background-image: url(${p => p.background});
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 `;
 

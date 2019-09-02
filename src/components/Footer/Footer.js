@@ -25,9 +25,7 @@ const Footer = () => (
         </Link>
         <Menu menu={menu} theme="footer" />
       </Left>
-      <Right>
-        <SocialIcons />
-      </Right>
+      <Right>{/* <SocialIcons /> */}</Right>
     </Wrap>
     <CopyrightStyled>
       <CopyrightTextStyled>

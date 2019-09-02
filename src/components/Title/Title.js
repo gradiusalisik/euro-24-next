@@ -8,7 +8,7 @@ const Title = ({ children, className }) => (
 );
 
 Title.propTypes = {
-  children: pt.string
+  children: pt.node
 };
 
 export default Title;

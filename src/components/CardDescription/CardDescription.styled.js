@@ -5,6 +5,7 @@ import Price from "../Price/Price";
 
 export const CardDescriptionStyled = styled.div`
   width: 100%;
+  height: 520px;
   opacity: 0;
   transform: translateX(0);
   transition: transform 0.7s ease-in, opacity 0.7s ease-in;

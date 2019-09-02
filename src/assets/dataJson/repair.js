@@ -47,7 +47,7 @@ export const advantagesBalconies = [
   {
     id: "3",
     icon: <Window />,
-    title: "Замена стелка",
-    description: "Необходимо при разгерметезации или повреждении стелка"
+    title: "Замена стекла",
+    description: "Необходимо при разгерметезации или повреждении стекла"
   }
 ];

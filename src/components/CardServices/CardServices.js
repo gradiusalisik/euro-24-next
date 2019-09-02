@@ -25,12 +25,17 @@ const CardServices = ({
     onMouseOver={onMouseOver}
     onMouseOut={onMouseOut}
     className={className}
+    spy={true}
+    to="services"
+    smooth={true}
+    duration={500}
+    offset={-185}
   >
     <Icon>{icon}</Icon>
     <Info>
       <Title>{title}</Title>
       <Description>{description}</Description>
-      {price ? <Price price={price} /> : <Text>Бесплатно</Text>}
+      {!!price ? <Price price={price} /> : <Text>Бесплатно</Text>}
     </Info>
   </CardServicesStyled>
 );

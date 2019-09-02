@@ -6,7 +6,7 @@ import Title from "../Title/Title";
 import SliderStocks from "../SliderStocks/SliderStocks";
 import SliderButton from "../SliderButton/SliderButton";
 
-import { StocksStyled, Top } from "./Stocks.styled";
+import { StocksStyled, Top, Subtitle } from "./Stocks.styled";
 
 const Stocks = () => {
   const sliderEl = useRef(null);
@@ -21,7 +21,13 @@ const Stocks = () => {
   return (
     <StocksStyled>
       <Top>
-        <Title>Акции</Title>
+        <Title>
+          Акции
+          <Subtitle>
+            <strong>*</strong> Скидка по акции не суммируется с другими скидками
+            и предложениями
+          </Subtitle>
+        </Title>
         {slides.length > 3 && (
           <SliderButton
             onClickNext={handleClickNext}

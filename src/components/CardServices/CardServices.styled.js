@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { colors } from "../../variables";
+import { Link as LinkScroll } from "react-scroll";
 
-export const CardServicesStyled = styled.div`
+export const CardServicesStyled = styled(LinkScroll)`
   padding: 40px 25px;
   display: flex;
-  height: 210px;
+  height: 240px;
   background-color: ${colors.white};
   cursor: pointer;
   border: 1px solid transparent;
@@ -17,7 +18,15 @@ export const CardServicesStyled = styled.div`
 `;
 
 export const Icon = styled.div`
+  width: 60px;
+  height: 60px;
   margin-right: 16px;
+  flex: 0 0 auto;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const Info = styled.div``;

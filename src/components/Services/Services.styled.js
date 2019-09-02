@@ -55,7 +55,7 @@ export const ContentInside = styled.div`
 export const TabContent = styled.div`
   position: relative;
   width: 680px;
-  height: 630px;
+  height: 720px;
   overflow: hidden;
 `;
 

@@ -1,7 +1,8 @@
 export const menu = [
   {
     id: "window",
-    text: "Окна"
+    text: "Окна",
+    offset: -140
   },
   {
     id: "repair",
@@ -25,6 +26,7 @@ export const menu = [
   },
   {
     id: "reviews",
-    text: "Отзывы"
+    text: "Отзывы",
+    offset: -240
   }
 ];

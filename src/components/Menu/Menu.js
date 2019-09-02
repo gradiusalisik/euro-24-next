@@ -15,8 +15,8 @@ const Menu = ({ menu, theme }) => (
             smooth={true}
             duration={500}
             theme={theme}
-            offset={-185}
-            >
+            offset={item.offset || -185}
+          >
             {item.text}
           </Link>
         </Item>

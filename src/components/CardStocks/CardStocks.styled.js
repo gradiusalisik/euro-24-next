@@ -7,6 +7,7 @@ export const CardStockStyled = styled.div`
 
 export const Image = styled.img`
   width: 100%;
+  height: 328px;
 `;
 
 export const Info = styled.div`

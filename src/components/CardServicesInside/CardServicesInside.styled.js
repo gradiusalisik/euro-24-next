@@ -22,9 +22,3 @@ export const Description = styled.p`
   line-height: 1.43;
   color: ${colors.main};
 `;
-
-export const Text = styled.span`
-  font-size: 32px;
-  font-weight: 500;
-  color: ${colors.orange};
-`;

@@ -16,7 +16,7 @@ export const ModalStyled = styled.div`
   visibility: hidden;
   font-size: 0;
   opacity: 0;
-  transition: visibility 0.3s, opacity 0.3s;
+  transition: z-index 0s 0.25s, visibility 0s 0.25s, opacity 0.25s;
   will-change: visibility, opacity;
 
   ${p =>
@@ -25,6 +25,7 @@ export const ModalStyled = styled.div`
       z-index: 10000;
       visibility: visible;
       opacity: 1;
+      transition: z-index 0s 0s, visibility 0s 0s, opacity 0.25s;
     `}
 `;
 

@@ -49,8 +49,13 @@ const App = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    document.addEventListener("contextmenu", handleBlockLeftClick);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleBlockLeftClick = event => {
+    event.preventDefault();
+  };
 
   const handleScroll = () => {
     const scrollPage = window.pageYOffset;
