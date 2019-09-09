@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { colors, font } from "../../variables";
 import { Link as LinkScroll } from "react-scroll";
+import { Logo } from "../Icons/Logo";
 
 export const HeaderStyled = styled.header`
   padding: 32px 56px;
@@ -23,8 +24,8 @@ export const HeaderStyled = styled.header`
       transition: transform ease-out 0.3s;
 
       ${LogoStyled} {
-        width: 60px;
-        height: 54px;
+        width: 40px;
+        height: 40px;
       }
     `}
 `;
@@ -38,10 +39,10 @@ export const Left = styled.div`
   align-items: center;
 `;
 
-export const LogoStyled = styled.img`
+export const LogoStyled = styled(Logo)`
   margin-right: 98px;
-  width: 80px;
-  height: 72px;
+  width: 66px;
+  height: 66px;
 `;
 
 export const Right = styled.div`

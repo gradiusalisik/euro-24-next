@@ -41,6 +41,6 @@ export const CopyrightTextStyled = styled.span`
 
 export const LogoFooterStyled = styled(LogoFooter)`
   margin-right: 44px;
-  width: 72px;
-  height: 65px;
+  width: 50px;
+  height: 50px;
 `;
