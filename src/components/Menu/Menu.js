@@ -13,6 +13,7 @@ const Menu = ({ menu, theme }) => (
             to={item.id}
             spy={true}
             smooth={true}
+            hashSpy={true}
             duration={500}
             theme={theme}
             offset={item.offset || -185}

@@ -20,6 +20,7 @@ import Window from "../src/components/Window/Window";
 import Repair from "../src/components/Repair/Repair";
 import Feedback from "../src/components/Feedback/Feedback";
 import Footer from "../src/components/Footer/Footer";
+import CompanyDetails from "../src/components/CompanyDetails/CompanyDetails";
 import ModalReviewSuccess from "../src/components/ModalReviewSuccess/ModalReviewSuccess";
 import ModalSuccess from "../src/components/ModalSuccess/ModalSuccess";
 import ModalWindowCalculator from "../src/components/ModalWindowCalculator/ModalWindowCalculator";
@@ -108,6 +109,9 @@ const App = () => {
           </Content>
           <Element name="reviews">
             <Reviews />
+          </Element>
+          <Element name="company-details">
+            <CompanyDetails />
           </Element>
           <Feedback />
           <Footer />

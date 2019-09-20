@@ -28,5 +28,9 @@ export const menu = [
     id: "reviews",
     text: "Отзывы",
     offset: -240
+  },
+  {
+    id: "company-details",
+    text: "Реквизиты"
   }
 ];
